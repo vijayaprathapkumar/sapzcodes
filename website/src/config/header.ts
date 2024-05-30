@@ -4,11 +4,11 @@ export const Menus = [
     path: "/",
   },
   {
-    name: "About",
+    name: "Services",
     path: "/about",
   },
   {
-    name: "Contact",
+    name: "Careers",
     path: "/contact",
   },
 ];
