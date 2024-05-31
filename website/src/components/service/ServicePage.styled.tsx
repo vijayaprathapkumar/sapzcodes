@@ -3,7 +3,6 @@ import { theme } from "@/themes/theme";
 import { styled } from "styled-components";
 
 export const Wrapper = styled.div`
-  height: 775.43px;
   background-color: ${theme.colors.white};
   background: linear-gradient(
     90deg,
@@ -12,19 +11,17 @@ export const Wrapper = styled.div`
   );
 
   ${breakpoints.lg} {
-    background-color: ${theme.colors.white};
     background: linear-gradient(
       90deg,
       ${theme.colors.white} 758px,
-      #f0f7ec 50%
+      ${theme.colors.lightgreen} 50%
     );
   }
   ${breakpoints.xl} {
-    background-color: ${theme.colors.white};
     background: linear-gradient(
       90deg,
       ${theme.colors.white} 998px,
-      #f0f7ec 50%
+      ${theme.colors.lightgreen} 50%
     );
   }
 `;
@@ -41,7 +38,7 @@ export const ServiceCard = styled.div<{ cardBgColor?: string }>`
   width: 300px !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 300px;
-
+ 
   ${breakpoints.lg} {
     width: 450px !important;
   }
@@ -78,12 +75,10 @@ export const ServiceDescription = styled.p<{ textColor?: string }>`
   ${breakpoints.lg} {
     font-size: 17px;
     margin-top: 20px;
-    line-height: 1.5;
   }
   ${breakpoints.xl} {
     font-size: 15px;
     margin-top: 20px;
-    line-height: 1.5;
   }
 `;
 
@@ -94,15 +89,8 @@ export const ArrowButtonsContainer = styled.div`
   margin-right: 120px;
 `;
 
-export const StyledCardContainer = styled.div<{
-  gap?: string;
-  margin?: string;
-}>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: ${({ margin }) => margin || "20px"};
-  gap: ${({ gap }) => gap || "100px"};
+export const StyledCardContainer = styled.div`
+  margin: 20px;
 `;
 
 export const SubHeader = styled.p`
@@ -114,9 +102,9 @@ export const SubHeader = styled.p`
 export const Title = styled.h2`
   font-size: 36px;
   font-weight: bold;
-  color: #000;
+  color: ${theme.colors.dark};
   margin-bottom: 16px;
-  width: 640px;
+
   ${breakpoints.xs} {
     width: 250px;
     font-size: 17px;
@@ -125,15 +113,11 @@ export const Title = styled.h2`
     width: 640px;
     font-size: 34px;
   }
-  ${breakpoints.lg} {
-    width: 640px;
-    font-size: 34px;
-  }
 `;
 
 export const Subtitle = styled.p`
-  font-size: 18px;
-  color: #666;
+
+  color:  ${theme.colors.grey};
   margin-bottom: 32px;
   width: 900px;
   ${breakpoints.xs} {
@@ -146,7 +130,6 @@ export const Subtitle = styled.p`
   }
   ${breakpoints.lg} {
     width: 640px;
-    font-size: 14px;
   }
   ${breakpoints.xl} {
     width: 840px;
@@ -159,8 +142,6 @@ export const HeaderWarrper = styled.div`
   position: relative;
   top: 50px;
   ${breakpoints.xs} {
-    margin-left: 50px;
-    position: relative;
     top: 20px;
   }
 `;

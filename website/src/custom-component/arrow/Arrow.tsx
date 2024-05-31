@@ -1,31 +1,34 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styled from "styled-components";
 import { Wrapper, ArrowButton } from "./Arrow.styled";
 
-
 interface ArrowButtonWrapperProps {
-  onClickLeft?: () => void;
-  onClickRight?: () => void;
+  sliderRef: any;
+  direction: "left" | "right";
   backgroundColor?: string;
 }
 
 const ArrowButtonCustom: React.FC<ArrowButtonWrapperProps> = ({
-  onClickLeft,
-  onClickRight,
+  sliderRef,
+  direction,
   backgroundColor,
 }) => {
+
+  const handleSlide = () => {
+    if (sliderRef.current) {
+      direction === "left" ? sliderRef.current.slickPrev() : sliderRef.current.slickNext();
+    }
+  };
+
   return (
     <Wrapper>
-      {onClickLeft && (
-        <ArrowButton onClick={onClickLeft} backgroundColor={backgroundColor}>
-          <img src="images/arrowLeft.png" alt="Left Arrow" />
-        </ArrowButton>
-      )}
-      {onClickRight && (
-        <ArrowButton onClick={onClickRight} backgroundColor={backgroundColor}>
-          <img src="images/arrowRight.png" alt="Right Arrow" />
-        </ArrowButton>
-      )}
+      <ArrowButton onClick={handleSlide} backgroundColor={backgroundColor}>
+        <img
+          src={`images/arrow${direction === "left" ? "Left" : "Right"}.png`}
+          alt={`${direction === "left" ? "Left" : "Right"} Arrow`}
+        />
+      </ArrowButton>
     </Wrapper>
   );
 };

@@ -1,5 +1,6 @@
 export interface Theme {
   colors: {
+    white: any;
     primary: string;
     secondary: string;
     accent: string;
@@ -9,7 +10,7 @@ export interface Theme {
     grey: string;
     navy: string;
     dark: string;
-    white: string;
+    lightnav: string;
     lightgreen: string;
   };
   fonts: {
@@ -30,6 +31,7 @@ export const theme: Theme = {
     navy: "#11142D",
     dark: "#212121",
     white: "#fff",
+    lightnav: "#e4e4e4",
     lightgreen: "#F0F7EC",
   },
   fonts: {
