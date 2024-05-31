@@ -4,7 +4,7 @@ import { FiMenu } from "react-icons/fi";
 import { styled } from "styled-components";
 
 interface CustomProps {
-  isClick?: boolean;
+  isMobile?: boolean;
 }
 export const HeaderWraper = styled.div`
   display: flex;
@@ -23,17 +23,11 @@ export const HeaderWraper = styled.div`
     padding: 0;
     height: 30px;
     background-color: rgba(0, 0, 0, 0.28);
-    position: fixed;
-    top: 0;
-    
+  
   }
   ${breakpoints.md} {
     display: flex;
     width: 100%;
-    height: 45px;
-    position: fixed;
-  }
-  ${breakpoints.lg} {
     height: 45px;
   }
   ${breakpoints.xl} {
@@ -41,30 +35,25 @@ export const HeaderWraper = styled.div`
   }
 `;
 export const NavLink = styled.div`
-  position: relative;
-  // left: 100%;
+  position: relative; 
   ${breakpoints.xs} {
-    position: relative;
     right: 0;
     left: 0;
   }
   ${breakpoints.md} {
-    position: relative;
     left: 18%;
   }
   ${breakpoints.lg} { 
-    position: relative;
     left: 30%;
   }
   ${breakpoints.xl} { 
-    position: relative;
     left: 48%;
   }
 `;
 export const Link = styled.a`
   color: #fff;
   text-decoration: none;
-
+  position: relative;
   &:hover {
     color: #46d200;
   }
@@ -73,29 +62,28 @@ export const Link = styled.a`
     color: #46d200;
   }
   ${breakpoints.xs} {
-    position: relative;
     bottom: 10px; 
+    color: black;
    }
    ${breakpoints.md} {
-    position: relative;
     bottom: 50px; 
+    color: #fff;
    }
    ${breakpoints.xl} { 
-    position: relative;
     bottom: 40px; 
+    color: #fff;
    }
 
 `;
 export const MenuWrapper = styled.div<CustomProps>`
-  display: flex;
   gap: 3rem;
-  
+
   ${breakpoints.xs} {
     flex-direction: column;
     gap: 5px;
     position: relative;
     font-size: 10px;
-    display: ${({ isClick }) => (isClick ? "flex" : "none")};
+    display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
     background-color: transparent;
     padding: 1rem;
     width: 100%;
@@ -103,19 +91,16 @@ export const MenuWrapper = styled.div<CustomProps>`
   ${breakpoints.md} {
     gap: 2rem;
     flex-direction: row;
-    display: flex;
     font-size: 12px;
+    display: flex;
+    
   }
   ${breakpoints.lg} { 
     gap: 3rem;
-    flex-direction: row;
-    display: flex;
     font-size: 15px;
+    
   }
   ${breakpoints.xl} { 
-    gap: 3rem;
-    flex-direction: row;
-    display: flex;
     font-size: 17px;
   }
 
@@ -131,25 +116,25 @@ export const Contact = styled.div`
     height: 40px;
     width: 150px;
     border-radius: 10px;
-    padding: 5px;
     border: 1px solid white;
+    padding: 5px;
+    
   }
   ${breakpoints.xs} {
-    position: relative;
     bottom: 15px;
     left: 0;
 
     .contact-btn {
       height: 20px;
-      width: 80px;
+      color: black;
+      width: 70px;
       font-size: 8px;
       border-radius: 15px;
+      border: 1px solid black;
       padding: 3px;
-      border: 1px solid white;
     }
   }
   ${breakpoints.md} {
-    position: relative;
     left: 50%;
     bottom: 88px;
   
@@ -160,25 +145,20 @@ export const Contact = styled.div`
       font-size: 10px;
       width: 80px;
       border-radius: 10px;
-      padding: 5px;
       border: 1px solid white;
+      padding: 5px;
     }
   }
   ${breakpoints.lg} { 
-    position: relative;
     left: 62%;
 
     .contact-btn {
       height: 26px;
       font-size: 12px;
       width: 90px;
-      border-radius: 10px;
-      padding: 5px;
-      border: 1px solid white;
     }
   }
   ${breakpoints.xl} { 
-    position: relative;
     left: 71%;
 
     .contact-btn {
@@ -186,36 +166,28 @@ export const Contact = styled.div`
       font-size: 13px;
       width: 110px;
       margin-top: 0px;
-      border-radius: 10px;
-      padding: 5px;
-      border: 1px solid white;
     }
   }
 `;
-export const NavSection = styled.div`
+export const LogoSection = styled.div`
   position: relative;
   right: 3%;
   ${breakpoints.xs} {
-    position: relative;
     left: 30px;
   }
   ${breakpoints.md} {
-    position: relative;
    right: 3%;
   }
   ${breakpoints.lg} {
-    position: relative;
     right: 2%;
   }
   ${breakpoints.xl} {
-    position: relative;
     left: 5%;
   }
  
 `;
 export const LogoImage = styled.img`
-  height: 29px;
-  width: 275px;
+
   ${breakpoints.xs} {
     height: 10px;
     width: 100px;
@@ -234,22 +206,18 @@ export const LogoImage = styled.img`
   }
 `;
 export const LinkContainer = styled.div`
-
-
+display: flex;
   ${breakpoints.xs} {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
   }
   ${breakpoints.md} {
-    display: flex;
     flex-direction: row;
     align-items: center;
   }
 `;
 export const MenuIcon = styled(FiMenu)`
-  display: none;
 
   ${breakpoints.xs} {
      display: block;
@@ -262,26 +230,29 @@ export const MenuIcon = styled(FiMenu)`
 
 `;
 export const DropdownMenu = styled.div<CustomProps>`
+
   ${breakpoints.xs} {
-    display: ${({ isClick }) => (isClick ? "flex" : "none")};
+    display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
     top: 30px;
-    left: 250px;
+    right: 0;
     width: 100%;
-    background-color: transparent;
+    background-color: white;
     padding: 1rem;
-    height: 125px;
-    z-index: 100;
+    height: 127px;
+    z-index: 99;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
   }
   ${breakpoints.md} {
-    display: ${({ isClick }) => (isClick ? "flex" : "block")};
+    display: ${({ isMobile }) => (isMobile ? "flex" : "block")};
     position: absolute;
     left: 250px;
     width: 100%;
     padding: 1rem;
     height: 125px;
+    background: none;
     z-index: 100;
   }
 `;

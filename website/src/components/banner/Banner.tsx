@@ -4,7 +4,6 @@ import {
   BackgroundGradient,
   BannerWrapper,
   ButtonBox,
-  GetButton,
   MainContent,
   SectionWrapper,
   SubContent,
@@ -14,7 +13,7 @@ const BannerComponent = () => {
   return (
     <BannerWrapper>
       <SectionWrapper>
-        <div className="relative">
+        <div className="set">
           <div>
             <BackgroundGradient />
           </div>
@@ -32,10 +31,10 @@ const BannerComponent = () => {
       Streamline processes, gain insights, and make data-driven decisions with VMA Tech Labs. Our tailored technology propels success for businesses of all sizes. Embrace the future of business management, unlock growth opportunities, and thrive with us today.
       </SubContent>
       <ButtonBox>
-      <GetButton>
+      <button className="get-btn">
         Get A Quote
         <ArrowImage src="images/button-Arrow.png" alt="arrow"/>
-      </GetButton>
+      </button>
       </ButtonBox>
     </BannerWrapper>
   );
