@@ -9,6 +9,8 @@ export interface Theme {
       grey: string;
       navy: string;
       dark: string;
+      white: string;
+      lightgreen: string;
     };
     fonts: {
       body: string;
@@ -26,7 +28,9 @@ export interface Theme {
       green: "#46D200",
       grey:"#474A55",
       navy:"#11142D",
-      dark:"#212121"
+      dark:"#212121",
+      white:'#fff',
+      lightgreen:'#F0F7EC',
     },
     fonts: {
       body: 'Arial, sans-serif',

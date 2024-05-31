@@ -2,91 +2,74 @@ import styled from "styled-components";
 import breakpoints from "@/themes/breakpoints";
 import { theme } from "@/themes/theme";
 
-interface DetailComponentProps {
-    reverse: boolean;
-    index: number;
-}
 
-export const MainWrapper = styled.div<DetailComponentProps>`
+export const MainWrapper = styled.div<{ 
+    imageAlignment: string;
+    background?: string; 
+}>`
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     margin-top: 60px;
-    padding: 30px;
-    background: ${({ index }) => (index === 1 ? '#F0F7EC' : '#fff')};
-
-    ${({ reverse }) => reverse && `
-        grid-template-areas: 
-            "about detail";
-    `}    
-    ${({ reverse }) => !reverse && `
-        grid-template-areas: 
-            "detail about";
-    `}    
+    padding: 30px;    
+    background: ${({background,imageAlignment }) => (imageAlignment === "right" ? `${background}` : `none`)};
     ${breakpoints.xs} {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "detail"
-            "about";
+        grid-template-columns: 1fr;        
     }
     ${breakpoints.lg} {
         grid-template-columns: 1fr 1fr;
-        ${({ reverse }) => reverse && `
-            grid-template-areas: 
-                "about detail";
-        `}        
-        ${({ reverse }) => !reverse && `
-            grid-template-areas: 
-                "detail about";
-        `}
     }
 `;
 
-export const DetailWrapper = styled.div<DetailComponentProps>`
-    grid-area: detail;
-    border: ${({ index }) => (index === 1 || index === 2 ? 'none' : '1px solid #46D200')};
+export const DetailWrapper = styled.div<{
+    imageAlignment: string,
+    border?: string;
+    objectFit?: string;
+    height: string;
+    width: string;
+    marginTop: string;
+}>`
+    order: ${({ imageAlignment }) => (imageAlignment === "right" ? 2 : 1)};
+    border: ${({ border }) => (border ? `${border}` : "none")};
     border-radius: 40px 0px 40px 0px;
     height: 300px;
     width: 470px;
-    margin-left: ${({ index }) => (index === 0 ? '70px' : '0px')};
-    margin-right: ${({ reverse }) => (reverse ? '70px' : '0px')};
     img {
         border-radius: 40px 0px 40px 0px;
-        height: 300px;
-        width: 470px;
+        height: ${({height}) => (height)};
+        width: ${({width}) => (width)};
         margin-left: 15px;
-        margin-top: -15px;
-        object-fit: ${({ index }) => (index === 1 || index === 2 ? 'contain' : 'cover')};
+        margin-top: ${({marginTop}) => (marginTop)};
+        object-fit: ${({ objectFit }) => (objectFit ? `${objectFit}` : "cover")};
     }
     ${breakpoints.xs} {
+        order: 1;
         margin-left: 20px;
         margin-right: 0px;
         margin-top: 30px;
-        margin-bottom: 20px;
+        margin-bottom: -20px;
         height: 200px;
         width: 270px;
         img {
-            height: 200px;
-            width: 270px;
+            height: 100%;
+            width: 100%;
         }
     }
     ${breakpoints.lg} {
+        order: ${({ imageAlignment }) => (imageAlignment === "right" ? 2 : 1)};
         height: 300px;
         width: 470px;
-        margin-left: ${({ index }) => (index === 0 ? '70px' : '0px')};
-        margin-right: ${({ reverse }) => (reverse ? '70px' : '0px')};
-        img {
-            height: 300px;
-            width: 470px;
+        margin-left: 50px;
+        img{
+            height: ${({height}) => (height)};
+            width: ${({width}) => (width)};
+            margin-top: ${({marginTop}) => (marginTop)};
         }
     }
 `;
 
-export const AboutDiv = styled.div<DetailComponentProps>`
-    grid-area: about;
-    margin-right: ${({ reverse }) => (reverse ? '0px' : '50px')};
-    margin-left: ${({ reverse }) => (reverse ? '50px' : '0px')};
-    margin-top:20px;
+export const AboutDiv = styled.div`
+    margin-top:40px;
     h4 {
         font-size: 18px;
         font-weight: 600;
@@ -108,7 +91,7 @@ export const AboutDiv = styled.div<DetailComponentProps>`
     button {
         border: none;
         background: ${theme.colors.green};
-        color: #fff;
+        color: ${theme.colors.white};
         padding: 10px;
         border-radius: 10px;
         margin-top: 25px;
@@ -119,12 +102,22 @@ export const AboutDiv = styled.div<DetailComponentProps>`
         }
     }
     ${breakpoints.xs} {
+        order: 2;
         margin-right: 0px;
         margin-left: 0px;
     }
     ${breakpoints.lg} {
-        margin-right: ${({ reverse }) => (reverse ? '0px' : '50px')};
-        margin-left: ${({ reverse }) => (reverse ? '50px' : '0px')};
+        margin-right: 50px;
+        margin-left: 40px;
+        h2{
+            font-size:20px;
+        }
+        h4{
+            font-size:12px;
+        }
+        p{
+            font-size:12px;
+        }
     }
 `;
 
