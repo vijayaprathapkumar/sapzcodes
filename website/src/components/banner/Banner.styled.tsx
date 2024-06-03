@@ -1,12 +1,12 @@
 import breakpoints from "@/themes/breakpoints";
+import { theme } from "@/themes/theme";
 import { styled } from "styled-components";
 
 export const BannerWrapper = styled.div`
-  min-height: 70vh;
+
 `;
 
 export const SectionWrapper = styled.section`
-  height: 100vh;
   width: 100%;
   overflow: hidden;
   .set {
@@ -30,13 +30,13 @@ export const BackgroundGradient = styled.div`
   top: 0;
   z-index: 0;
   ${breakpoints.xs} {
-    height: 96%;
-  }
-  ${breakpoints.md} {
     height: 98%;
   }
-  ${breakpoints.xl} {
+  ${breakpoints.md} {
     height: 99%;
+  }
+  ${breakpoints.xl} {
+    height: 99.5%;
   }
 `;
 export const MainContent = styled.div`
@@ -47,31 +47,30 @@ export const MainContent = styled.div`
   z-index: 2;
   font-weight: 600;
   font-size: 40px;
-  color: white;
+  color: ${theme.colors.white};
   ${breakpoints.xs} {
     top: 40px;
-    width: 180px;
-    // z-index: 50;
+    width: 130px;
     font-weight: 400;
     font-size: 10px;
   }
   ${breakpoints.md} {
     top: 60px;
     left: 5%;
-    width: 360px;
+    width: 300px;
     z-index: 2;
     font-weight: 600;
     font-size: 20px;
   }
   ${breakpoints.lg} {
     left: 4%;
-    width: 450px;
+    width: 350px;
     font-size: 25px;
   }
   ${breakpoints.xl} {
     top: 110px;
     left: 5%;
-    width: 700px;
+    width: 600px;
     font-size: 40px;
   }
 `;
@@ -82,29 +81,29 @@ export const SubContent = styled.div`
   width: 700px;
   z-index: 2;
   line-height: 1.8;
-  color: white;
+  color: ${theme.colors.white};
 
   ${breakpoints.xs} {
-    top: 90px;
+    top: 80px;
     width: 220px;
     font-size: 6px;
   }
   ${breakpoints.md} {
-    top: 160px;
+    top: 145px;
     left: 5%;
     width: 350px;
     font-size: 10px;
   }
   ${breakpoints.lg} {
-    top: 180px;
+    top: 170px;
     left: 4%;
-    width: 460px;
+    width: 410px;
     font-size: 15px;
   }
   ${breakpoints.xl} {
-    top: 310px;
+    top: 280px;
     left: 5%;
-    width: 700px;
+    width: 600px;
   }
 `;
 export const ButtonBox = styled.div`
@@ -114,8 +113,8 @@ export const ButtonBox = styled.div`
   left: 8%;
   height: 50px;
   z-index: 2;
-  background-color: #46d200;
-  border-radius: 10px;
+  background-color:  ${theme.colors.green};
+  border-radius: 5px;
   padding: 5px;
 
   .get-btn {
@@ -123,11 +122,11 @@ export const ButtonBox = styled.div`
     width: 150px;
     font-size: 13px;
     font-weight: 600;
-    color: white;
+    color: ${theme.colors.white};
     border: none;
-    background-color: #46d200;
+    background-color:  ${theme.colors.green};
     &:hover {
-      background-color: #46d200;
+      background-color:  ${theme.colors.green};
     }
 
     &:focus {
@@ -135,7 +134,7 @@ export const ButtonBox = styled.div`
     }
   }
   ${breakpoints.xs} {
-    top: 135px;
+    top: 125px;
     height: 20px;
     .get-btn {
       width: 50px;
@@ -143,25 +142,26 @@ export const ButtonBox = styled.div`
     }
   }
   ${breakpoints.md} {
-    top: 240px;
+    top: 220px;
     left: 5%;
-    height: 25px;
+    height: 27px;
+
     .get-btn {
-      width: 100px;
-      font-size: 10px;
+      width: 70px;
+      font-size: 8px;
     }
   }
   ${breakpoints.lg} {
-    top: 340px;
+    top: 300px;
     left: 4%;
-    height: 28px;
+    height: 30px;
     .get-btn {
-      width: 120px;
-      font-size: 13px;
+      width: 90px;
+      font-size: 10px;
     }
   }
   ${breakpoints.xl} {
-    top: 420px;
+    top: 400px;
     left: 5%;
     height: 50px;
     .get-btn {

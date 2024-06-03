@@ -11,24 +11,26 @@ export const HeaderWraper = styled.div`
   justify-content: space-around;
   align-items: center;
   padding: 1rem 2rem;
-  color: #fff;
+  color: ${theme.colors.white};
   z-index: 50;
   width: 100%;
   height: 65px;
   position: fixed;
   top: 0;
-  
 
   ${breakpoints.xs} {
     padding: 0;
-    height: 30px;
+    height: 24px;
     background-color: rgba(0, 0, 0, 0.28);
   
   }
   ${breakpoints.md} {
     display: flex;
     width: 100%;
-    height: 45px;
+    height: 40px;
+  }
+  ${breakpoints.lg} {
+    height: 47px;
   }
   ${breakpoints.xl} {
     height: 65px;
@@ -41,21 +43,21 @@ export const NavLink = styled.div`
     left: 0;
   }
   ${breakpoints.md} {
-    left: 18%;
+    left: 20%;
   }
   ${breakpoints.lg} { 
-    left: 30%;
+    left: 34%;
   }
   ${breakpoints.xl} { 
-    left: 48%;
+    left: 50%;
   }
 `;
 export const Link = styled.a`
-  color: #fff;
+color: ${theme.colors.white};
   text-decoration: none;
   position: relative;
   &:hover {
-    color: #46d200;
+    color: ${theme.colors.green};
   }
 
   &:active {
@@ -66,12 +68,16 @@ export const Link = styled.a`
     color: black;
    }
    ${breakpoints.md} {
-    bottom: 50px; 
-    color: #fff;
+    bottom: 44px; 
+    color: ${theme.colors.white};
+   }
+   ${breakpoints.lg} {
+    bottom: 42px; 
+    color: ${theme.colors.white};
    }
    ${breakpoints.xl} { 
-    bottom: 40px; 
-    color: #fff;
+    bottom: 33px; 
+    color: ${theme.colors.white};
    }
 
 `;
@@ -112,7 +118,7 @@ export const Contact = styled.div`
 
   .contact-btn {
     background-color: transparent;
-    color: white;
+    color: ${theme.colors.white};
     height: 40px;
     width: 150px;
     border-radius: 10px;
@@ -136,11 +142,11 @@ export const Contact = styled.div`
   }
   ${breakpoints.md} {
     left: 50%;
-    bottom: 88px;
+    bottom: 79px;
   
     .contact-btn {
       background-color: transparent;
-      color: white;
+      color: ${theme.colors.white};
       height: 25px;
       font-size: 10px;
       width: 80px;
@@ -197,16 +203,16 @@ export const LogoImage = styled.img`
     width: 200px;
   }
   ${breakpoints.lg} {
-    height: 25px;
-  width: 250px;
+    height: 19px;
+   width: 200px;
   }
-  ${breakpoints.lg} {
+  ${breakpoints.xl} {
     height: 29px;
     width: 275px;
   }
 `;
 export const LinkContainer = styled.div`
-display: flex;
+ display: flex;
   ${breakpoints.xs} {
     flex-direction: column;
     align-items: flex-start;
@@ -236,14 +242,14 @@ export const DropdownMenu = styled.div<CustomProps>`
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: 30px;
+    top: 25px;
     right: 0;
     width: 100%;
-    background-color: white;
+    background-color: ${theme.colors.white};
     padding: 1rem;
-    height: 127px;
+    height: 133px;
     z-index: 99;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.0);
   }
   ${breakpoints.md} {
     display: ${({ isMobile }) => (isMobile ? "flex" : "block")};
@@ -253,6 +259,7 @@ export const DropdownMenu = styled.div<CustomProps>`
     padding: 1rem;
     height: 125px;
     background: none;
+    box-shadow: none;
     z-index: 100;
   }
 `;
