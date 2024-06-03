@@ -1,30 +1,45 @@
+/* eslint-disable @next/next/no-img-element */
 import {
+  ArrowImage,
   BackgroundGradient,
   BannerWrapper,
+  ButtonBox,
+  MainContent,
   SectionWrapper,
+  SubContent,
 } from "./Banner.styled";
 
 const BannerComponent = () => {
   return (
     <BannerWrapper>
       <SectionWrapper>
-        <div className="relative">
+        <div className="set">
           <div>
-            <img
-              src="https://vmatechlabs.com/static/media/colleagues.dfd046f67c1aa0022ba5.png"
-              alt="banner"
-              className="bg-gardion"
-            />
             <BackgroundGradient />
           </div>
           <img
-            src="https://vmatechlabs.com/static/media/colleagues.dfd046f67c1aa0022ba5.png"
+            src="images/banner.png"
             alt="banner"
+            className="banner-image"
           />
         </div>
       </SectionWrapper>
+      <MainContent>
+       Propel our business and achieve new height with Sapcodes transformative solutions.
+      </MainContent>
+      <SubContent>
+      Streamline processes, gain insights, and make data-driven decisions with VMA Tech Labs. Our tailored technology propels success for businesses of all sizes. Embrace the future of business management, unlock growth opportunities, and thrive with us today.
+      </SubContent>
+      <ButtonBox>
+      <button className="get-btn">
+        Get A Quote
+        <ArrowImage src="images/button-Arrow.png" alt="arrow"/>
+      </button>
+      </ButtonBox>
     </BannerWrapper>
   );
 };
 
 export default BannerComponent;
+///images/button-Arrow.png
+///images/banner.png

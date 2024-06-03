@@ -1,14 +1,17 @@
+import { theme } from "@/themes/theme";
+
 export const Menus = [
   {
     name: "Home",
     path: "/",
   },
   {
-    name: "About",
+    name: "Services",
     path: "/about",
   },
   {
-    name: "Contact",
+    name: "Careers",
     path: "/contact",
   },
 ];
+
