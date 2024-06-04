@@ -41,5 +41,3 @@ const BannerComponent = () => {
 };
 
 export default BannerComponent;
-///images/button-Arrow.png
-///images/banner.png
