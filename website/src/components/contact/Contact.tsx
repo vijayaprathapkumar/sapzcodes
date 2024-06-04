@@ -1,7 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { CiLocationOn } from "react-icons/ci";
-import { TbPhone } from "react-icons/tb";
-import { TiMail } from "react-icons/ti";
 import { AddressContent, ContactSection, ContactWrapper, ImageSection,LocationSection } from "./Contact.styled";
 
 const ContactComponent = () => {
@@ -18,7 +15,7 @@ const ContactComponent = () => {
         <LocationSection>
           <h3>Find us at</h3>
           <div className="part-one">
-          <CiLocationOn />
+          <img src="/images/MapPin.png" alt="MapPin-Img" className="map"/>
           <p>
             3rd Floor, 311 - Sanganoor main road. Ganapathy, Coimbatore - 641006
           </p>
@@ -27,9 +24,9 @@ const ContactComponent = () => {
         <ContactSection>
           <h3>Reach out to us at</h3>
           <div className="part-sec">
-          <TiMail />
+          <img src="/images/Envelope.png" alt="Envelope-Img" className="envelope"/>
           <p>contact@homelun.</p>
-          <TbPhone />
+          <img src="/images/Phone.png" alt="Phone-Img" className="phone"/>
           <p>+1 234 567 890</p>
           </div>
         </ContactSection>
