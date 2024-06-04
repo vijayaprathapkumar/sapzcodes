@@ -3,6 +3,8 @@ import "./globals.css";
 import StyledComponentsRegistry from "@/lib/registry";
 import { ThemeProvider } from "./theme-provider";
 import { Poppins } from 'next/font/google';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const poppins = Poppins({
   subsets: ['latin'],
