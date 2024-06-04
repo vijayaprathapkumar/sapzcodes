@@ -6,24 +6,19 @@ export const TestimonialCard = styled.div`
   background: ${theme.colors.white};
   padding: 2rem;
   border: 1px solid ${theme.colors.lightnav};
-  height: 280px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   text-align: center;
-
   ${breakpoints.xs} {
     width: 300px !important;
-    height: 300px;
   }
   ${breakpoints.lg} {
     width: 350px !important;
-    height: 280px;
   }
 `;
 
 export const TestimonialText = styled.p`
   font-size: 14px;
-
   color: ${theme.colors.grey};
   font-weight: 400;
   text-align: left;
@@ -63,7 +58,7 @@ export const LeftArrowButton = styled.img`
   cursor: pointer;
   color: ${theme.colors.white};
   background-repeat: no-repeat, repeat;
-  z-index:999;
+  z-index: 999;
   &:hover {
     background-color: ${theme.colors.white};
     background-image: url("images/arrowLeft.png");
@@ -102,7 +97,6 @@ export const RightArrowButton = styled.img`
   }
   ${breakpoints.lg} {
     right: -30px;
-    
   }
 `;
 
@@ -114,10 +108,9 @@ export const Warrper = styled.div`
   ${breakpoints.lg} {
     height: 50vh;
   }
-    ${breakpoints.xl} {
+  ${breakpoints.xl} {
     height: 60vh;
   }
-  
 `;
 export const ContentWarrper = styled.div`
   margin: 20px auto;

@@ -64,15 +64,16 @@ export const Heading = styled.div`
   ${breakpoints.xs} {
     font-size: 22px;
     font-weight: 800;
-    margin-top:40px;
+    margin-top: 50px;
   }
   ${breakpoints.sm} {
     font-size: 36px;
+    margin-top: 20px;
   }
   ${breakpoints.lg} {
     font-size: 24px;
     font-weight: 700;
-    margin-top: 100px;
+    margin-top: 50px;
   }
 `;
 
