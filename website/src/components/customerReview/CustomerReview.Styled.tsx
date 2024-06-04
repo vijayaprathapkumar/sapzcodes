@@ -101,7 +101,6 @@ export const RightArrowButton = styled.img`
 `;
 
 export const Warrper = styled.div`
-  height: 70vh;
   ${breakpoints.xs} {
     height: 55vh;
   }
@@ -113,7 +112,7 @@ export const Warrper = styled.div`
   }
 `;
 export const ContentWarrper = styled.div`
-  margin: 20px auto;
+  margin:0px auto;
   max-width: 370px;
 `;
 export const Title = styled.h1`

@@ -27,7 +27,7 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
-  color: black;
+  color: ${theme.colors.dark};
 `;
 
 export const LeftArrow = styled.img`
@@ -46,7 +46,6 @@ export const Title = styled.h1`
 
 export const SliderContainer = styled.div`
   margin: 0 auto;
-  width: 800px;
   ${breakpoints.xs} {
     width: 320px;
   }
@@ -68,7 +67,6 @@ export const Heading = styled.div`
   }
   ${breakpoints.sm} {
     font-size: 36px;
-    margin-top: 20px;
   }
   ${breakpoints.lg} {
     font-size: 24px;
@@ -119,5 +117,6 @@ export const ContentWarrper = styled.div`
   ${breakpoints.lg} {
     width: 850px;
     font-size: 20px;
+    margin-bottom: 10px;
   }
 `;

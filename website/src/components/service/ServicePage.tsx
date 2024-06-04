@@ -20,8 +20,18 @@ import {
 } from "./ServicePage.styled";
 import { ServicesItems } from "@/config/carousal";
 
+interface ServiceItem {
+  cardBgColor: string;
+  bgColor: string;
+  icon: JSX.Element;
+  title: string;
+  titleColor: string;
+  descriptionColor: string;
+  description: string;
+}
+
 const ServiceComponent = () => {
-  const sliderRef = useRef<any>(null);
+  const sliderRef = useRef(null);
 
   const ServiceHeader = () => {
     return (
@@ -42,7 +52,7 @@ const ServiceComponent = () => {
     return (
       <ArrowButtonsContainer>
         <ArrowButtonCustom
-          backgroundColor={"#fff"}
+          backgroundColor={theme.colors.white}
           sliderRef={sliderRef}
           direction="left"
         />
@@ -56,7 +66,7 @@ const ServiceComponent = () => {
   };
 
   const ServiceItems = () => {
-    return ServicesItems.map((item: any, index: any) => {
+    return ServicesItems.map((item: ServiceItem, index: number) => {
       const {
         cardBgColor,
         bgColor,

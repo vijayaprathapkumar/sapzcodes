@@ -1,6 +1,6 @@
 export interface Theme {
   colors: {
-    white: any;
+    white: string;
     primary: string;
     secondary: string;
     accent: string;

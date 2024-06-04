@@ -1,3 +1,4 @@
+import { theme } from "@/themes/theme";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -8,8 +9,8 @@ export const Wrapper = styled.div`
 `;
 
 export const ArrowButton = styled.button<{ backgroundColor?: string }>`
-  background-color: ${(props) => props.backgroundColor || "#007bff"};
-  color: white;
+  background-color: ${(props) => props.backgroundColor || theme.colors.dark};
+  color: ${theme.colors.white};
   border: none;
   padding: 3px 5px;
   border-radius: 50px;

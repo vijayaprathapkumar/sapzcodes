@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import styled from "styled-components";
 import { Wrapper, ArrowButton } from "./Arrow.styled";
 
 interface ArrowButtonWrapperProps {

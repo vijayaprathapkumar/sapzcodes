@@ -102,6 +102,9 @@ export const EnvironmentSettings = {
   ...commonSettings,
   slidesToShow: 1,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  pauseOnHover: true,
   nextArrow: <RightArrow src="images/arrowRight.png" />,
   prevArrow: <LeftArrow src="images/arrowLeft.png" />,
 };

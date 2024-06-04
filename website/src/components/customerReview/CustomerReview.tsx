@@ -18,8 +18,15 @@ import {
 } from "./CustomerReview.Styled";
 import { CustomItems } from "@/config/carousal";
 
+interface TestimonialProps {
+  text: string;
+  author: string;
+  title: string;
+  imageSrc: string;
+}
+
 const CustomerReviewComponent = () => {
-  const Testimonial = ({ text, author, title, imageSrc }: any) => (
+  const Testimonial = ({ text, author, title, imageSrc }: TestimonialProps) => (
     <ContentWarrper>
       <TestimonialCard>
         <TestimonialText>{text}</TestimonialText>

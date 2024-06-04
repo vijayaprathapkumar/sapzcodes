@@ -32,7 +32,7 @@ export const Header = styled.div`
 `;
 
 export const ServiceCard = styled.div<{ cardBgColor?: string }>`
-  background-color: ${(props) => props.cardBgColor || "white"};
+  background-color: ${(props) => props.cardBgColor || theme.colors.white};
   padding: 10px;
   margin: 0 20px 0 20px;
   width: 300px !important;
@@ -54,7 +54,7 @@ export const ServiceIcon = styled.div<{ bgColor?: string }>`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: ${(props) => props.bgColor || "white"};
+  background-color: ${(props) => props.bgColor || theme.colors.white};
   color: ${theme.colors.white};
   font-size: 20px;
   margin-bottom: 10px;
@@ -64,14 +64,14 @@ export const ServiceTitle = styled.h3<{ textColor?: string }>`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
-  color: ${(props) => props.textColor || "black"};
+  color: ${(props) => props.textColor ||theme.colors.dark};
 `;
 
 export const ServiceDescription = styled.p<{ textColor?: string }>`
   font-size: 14px;
   margin-top: 20px;
   line-height: 1.5;
-  color: ${(props) => props.textColor || "black"};
+  color: ${(props) => props.textColor || theme.colors.dark};
   ${breakpoints.lg} {
     font-size: 17px;
     margin-top: 20px;
@@ -119,7 +119,6 @@ export const Subtitle = styled.p`
 
   color:  ${theme.colors.grey};
   margin-bottom: 32px;
-  width: 900px;
   ${breakpoints.xs} {
     width: 300px;
     font-size: 14px;
