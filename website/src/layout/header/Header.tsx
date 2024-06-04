@@ -28,7 +28,7 @@ const HeaderComponent = () => {
       );
     });
   };
-  //images/sapzcodes.png
+  
   return (
     <HeaderWraper>
       <LogoSection>
