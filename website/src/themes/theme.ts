@@ -13,6 +13,7 @@ export interface Theme {
     light:string;
     lightgreen: string;
     icon: string;
+    shadow: string;
   };
   fonts: {
     body: string;
@@ -34,7 +35,8 @@ export const theme: Theme = {
     white:'#fff',
     light:"#ECECEC",
     lightgreen:'#F0F7EC',
-    icon:"#222631"
+    icon:"#222631",
+    shadow:"#0000000F"
   },
   fonts: {
     body: 'Arial, sans-serif',

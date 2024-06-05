@@ -119,7 +119,7 @@ export const IconWrapper = styled.div`
 `
 
 export const FacebookIcon = styled(FaFacebookF)`
-    border: 1px solid #ECECEC;
+    border: 1px solid ${theme.colors.light};
     color:${theme.colors.icon};
     border-radius:25px;
     box-shadow: 0px 6px 10px 0px #0000000F;
@@ -138,7 +138,7 @@ export const FacebookIcon = styled(FaFacebookF)`
     }
 `
 export const GoogleIcon = styled(FaGoogle)`
-    border: 1px solid #ECECEC;
+    border: 1px solid ${theme.colors.light};
     color:${theme.colors.icon};
     border-radius:25px;
     box-shadow: 0px 6px 10px 0px #0000000F;
@@ -160,7 +160,7 @@ export const GoogleIcon = styled(FaGoogle)`
     }
 `
 export const InstaIcon = styled(CiInstagram)`
-    border: 1px solid #ECECEC;
+    border: 1px solid ${theme.colors.light};
     color:${theme.colors.icon};
     border-radius:25px;
     box-shadow: 0px 6px 10px 0px #0000000F;
@@ -182,7 +182,7 @@ export const InstaIcon = styled(CiInstagram)`
     }
 `
 export const TwitterIcon = styled(RiTwitterXLine)`
-    border: 1px solid #ECECEC;
+    border: 1px solid ${theme.colors.light};
     color:${theme.colors.icon};
     border-radius:25px;
     box-shadow: 0px 6px 10px 0px #0000000F;
@@ -204,7 +204,7 @@ export const TwitterIcon = styled(RiTwitterXLine)`
     }
 `
 export const LinkedInIcon = styled(FaLinkedinIn)`
-    border: 1px solid #ECECEC;
+    border: 1px solid ${theme.colors.light};
     color:${theme.colors.icon};
     border-radius:25px;
     box-shadow: 0px 6px 10px 0px #0000000F;
