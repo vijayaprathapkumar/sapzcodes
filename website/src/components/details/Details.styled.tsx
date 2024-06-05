@@ -71,7 +71,7 @@ export const MainWrapper = styled.div<{
     ${breakpoints.md} {
         flex-direction:column;
         .image{
-            top:350px; 
+            top:1050px; 
         }
         .dots{
             margin-top:-30px;
@@ -89,7 +89,7 @@ export const MainWrapper = styled.div<{
     ${breakpoints.lg} {
         flex-direction:row;
         .image{
-            top:900px; 
+            top:860px; 
         }
         .dark{
             margin-top:360px;
@@ -102,7 +102,7 @@ export const MainWrapper = styled.div<{
     }
     ${breakpoints.xl} {
         .image{
-            top:270px; 
+            top:950px; 
         }     
     }
 `;

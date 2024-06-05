@@ -16,4 +16,6 @@ export const ArrowButton = styled.button<{ backgroundColor?: string }>`
   border-radius: 50px;
   cursor: pointer;
   font-size: 10px;
+  z-index:1;
+  margin:0 5px;
 `;
