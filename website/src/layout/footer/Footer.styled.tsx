@@ -122,7 +122,7 @@ export const FacebookIcon = styled(FaFacebookF)`
     border: 1px solid ${theme.colors.light};
     color:${theme.colors.icon};
     border-radius:25px;
-    box-shadow: 0px 6px 10px 0px #0000000F;
+    box-shadow: 0px 6px 10px 0px ${theme.colors.shadow};
     height:40px;
     width:40px;
     padding:10px;
@@ -141,7 +141,7 @@ export const GoogleIcon = styled(FaGoogle)`
     border: 1px solid ${theme.colors.light};
     color:${theme.colors.icon};
     border-radius:25px;
-    box-shadow: 0px 6px 10px 0px #0000000F;
+    box-shadow: 0px 6px 10px 0px ${theme.colors.shadow};
     height:40px;
     width:40px;
     padding:10px;
@@ -163,7 +163,7 @@ export const InstaIcon = styled(CiInstagram)`
     border: 1px solid ${theme.colors.light};
     color:${theme.colors.icon};
     border-radius:25px;
-    box-shadow: 0px 6px 10px 0px #0000000F;
+    box-shadow: 0px 6px 10px 0px ${theme.colors.shadow};
     height:40px;
     width:40px;
     padding:10px;
@@ -185,7 +185,7 @@ export const TwitterIcon = styled(RiTwitterXLine)`
     border: 1px solid ${theme.colors.light};
     color:${theme.colors.icon};
     border-radius:25px;
-    box-shadow: 0px 6px 10px 0px #0000000F;
+    box-shadow: 0px 6px 10px 0px ${theme.colors.shadow};
     height:40px;
     width:40px;
     padding:10px;
@@ -207,7 +207,7 @@ export const LinkedInIcon = styled(FaLinkedinIn)`
     border: 1px solid ${theme.colors.light};
     color:${theme.colors.icon};
     border-radius:25px;
-    box-shadow: 0px 6px 10px 0px #0000000F;
+    box-shadow: 0px 6px 10px 0px ${theme.colors.shadow};
     height:40px;
     width:40px;
     padding:10px;

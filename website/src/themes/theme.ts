@@ -1,5 +1,6 @@
 export interface Theme {
   colors: {
+    white: string;
     primary: string;
     secondary: string;
     accent: string;
@@ -9,11 +10,11 @@ export interface Theme {
     grey: string;
     navy: string;
     dark: string;
-    white: string;
     light:string;
     lightgreen: string;
     icon: string;
     shadow: string;
+    lightnav: string;
   };
   fonts: {
     body: string;
@@ -36,10 +37,13 @@ export const theme: Theme = {
     light:"#ECECEC",
     lightgreen:'#F0F7EC',
     icon:"#222631",
-    shadow:"#0000000F"
+    shadow:"#0000000F",
+    lightnav:"#E4E4E4"
   },
   fonts: {
     body: 'Arial, sans-serif',
     heading: 'Helvetica, sans-serif',
   },
 };
+
+

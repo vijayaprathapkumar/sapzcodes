@@ -89,7 +89,7 @@ export const MainWrapper = styled.div<{
     ${breakpoints.lg} {
         flex-direction:row;
         .image{
-            top:200px; 
+            top:900px; 
         }
         .dark{
             margin-top:360px;

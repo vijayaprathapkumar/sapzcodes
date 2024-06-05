@@ -2,10 +2,6 @@ import breakpoints from "@/themes/breakpoints";
 import { theme } from "@/themes/theme";
 import { styled } from "styled-components";
 
-export const BannerWrapper = styled.div`
-
-`;
-
 export const SectionWrapper = styled.section`
   width: 100%;
   overflow: hidden;
