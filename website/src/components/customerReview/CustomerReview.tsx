@@ -7,6 +7,7 @@ import {
   AuthorImage,
   AuthorName,
   AuthorTitle,
+  AuthorWarrper,
   ContentWarrper,
   Header,
   SildeContainer,
@@ -27,19 +28,17 @@ interface TestimonialProps {
 
 const CustomerReviewComponent = () => {
   const Testimonial = ({ text, author, title, imageSrc }: TestimonialProps) => (
-    <ContentWarrper>
-      <TestimonialCard>
-        <TestimonialText>{text}</TestimonialText>
-        <br />
-        <TestimonialAuthor>
-          <AuthorImage src={imageSrc} alt="Author Avatar" />
-          <div>
-            <AuthorName>{author}</AuthorName>
-            <AuthorTitle>{title}</AuthorTitle>
-          </div>
-        </TestimonialAuthor>
-      </TestimonialCard>
-    </ContentWarrper>
+    <TestimonialCard>
+      <TestimonialText>{text}</TestimonialText>
+      <br />
+      <TestimonialAuthor>
+        <AuthorImage src={imageSrc} alt="Author Avatar" />
+        <AuthorWarrper>
+          <AuthorName>{author}</AuthorName>
+          <AuthorTitle>{title}</AuthorTitle>
+        </AuthorWarrper>
+      </TestimonialAuthor>
+    </TestimonialCard>
   );
 
   return (

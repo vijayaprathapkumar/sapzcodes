@@ -34,14 +34,56 @@ export const LeftArrow = styled.img`
   width: 32px;
   height: 32px;
   filter: brightness(0) invert(1);
+  position: absolute;
+  left: -22%;
+  ${breakpoints.xs} {
+    left: -10%;
+  }
+  ${breakpoints.md} {
+    left: -20%;
+  }
+  ${breakpoints.lg} {
+    left: -3%;
+  }
+  ${breakpoints.xl} {
+    left: -22%;
+  }
 `;
 
 export const RightArrow = styled.img`
   width: 32px;
   height: 32px;
+  position: absolute;
+  left: 120%;
+  ${breakpoints.xs} {
+    left: 100%;
+  }
+  ${breakpoints.md} {
+    left: 115%;
+  }
+  ${breakpoints.lg} {
+    left: 100%;
+  }
+  ${breakpoints.xl} {
+    left: 120%;
+  }
 `;
 export const Title = styled.h1`
   color: ${theme.colors.white};
+  font-size: 40px;
+  line-height: 48px;
+  ${breakpoints.xs} {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+   ${breakpoints.md} {
+    font-size: 22px;
+    margin-bottom: -30px;
+  }
+  ${breakpoints.lg} {
+    font-size: 38px;
+    margin-bottom: 0px;
+  }
 `;
 
 export const SliderContainer = styled.div`
@@ -63,15 +105,22 @@ export const Heading = styled.div`
   ${breakpoints.xs} {
     font-size: 22px;
     font-weight: 800;
-    margin-top: 50px;
+    margin-top: 230px;
   }
   ${breakpoints.sm} {
     font-size: 36px;
   }
+  ${breakpoints.md} {
+    margin-top: 140px;
+  }
   ${breakpoints.lg} {
-    font-size: 24px;
+    font-size: 40px;
     font-weight: 700;
-    margin-top: 50px;
+    margin-top: 80px;
+    line-height: 48px;
+  }
+  ${breakpoints.xl} {
+    margin-top: 70px;
   }
 `;
 
@@ -88,35 +137,37 @@ export const SubHeading = styled.p`
     width: 660px;
   }
   ${breakpoints.lg} {
-    max-width: 780px;
-    font-size: 17.6px;
+    width: 800px;
+    font-size: 16px;
+    line-height: 24px;
     text-align: justify;
   }
 `;
 
 export const ContentWarrper = styled.div`
-  width: 700px;
   margin-left: 50px;
+  height: 72px;
   color: ${theme.colors.white};
   text-align: center;
   font-weight: 400;
   font-size: 19px;
   ${breakpoints.xs} {
-    width: 290px;
     margin: 0 auto;
     font-size: 14px;
   }
   ${breakpoints.sm} {
-    width: 450px;
     margin: 40px auto;
     font-size: 26px;
   }
-  ${breakpoints.md} {
-    width: 490px;
+   ${breakpoints.md} {
+    margin: 40px auto;
+    font-size: 18px;
   }
   ${breakpoints.lg} {
-    width: 850px;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
+  }
+  ${breakpoints.xl} {
+    font-size: 16px;
   }
 `;

@@ -4,30 +4,33 @@ import { styled } from "styled-components";
 
 export const TestimonialCard = styled.div`
   background: ${theme.colors.white};
-  padding: 2rem;
+  padding: 2.5rem;
   border: 1px solid ${theme.colors.lightnav};
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   text-align: center;
   ${breakpoints.xs} {
-    width: 300px !important;
+    width: 310px;
+  }
+  ${breakpoints.md} {
+    width: 450px;
   }
   ${breakpoints.lg} {
-    width: 350px !important;
+    width: 380px !important;
+    height: 298px;
   }
 `;
 
 export const TestimonialText = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   color: ${theme.colors.grey};
   font-weight: 400;
   text-align: left;
+  line-height: 24px;
 `;
 
 export const TestimonialAuthor = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const AuthorImage = styled.img`
@@ -41,6 +44,10 @@ export const AuthorName = styled.h3`
   font-size: 1.2rem;
   font-weight: bold;
   color: ${theme.colors.grey};
+`;
+
+export const AuthorWarrper = styled.div`
+  text-align: left;
 `;
 
 export const AuthorTitle = styled.p`
@@ -58,7 +65,7 @@ export const LeftArrowButton = styled.img`
   cursor: pointer;
   color: ${theme.colors.white};
   background-repeat: no-repeat, repeat;
-  z-index: 999;
+  z-index: 1;
   &:hover {
     background-color: ${theme.colors.white};
     background-image: url("images/arrowLeft.png");
@@ -67,36 +74,42 @@ export const LeftArrowButton = styled.img`
     background-repeat: no-repeat, repeat;
   }
   ${breakpoints.xs} {
-    left: 5px;
+    left: 1px;
+  }
+  ${breakpoints.md} {
+    left: 40px;
   }
   ${breakpoints.lg} {
-    left: -20px;
+    left: -90px;
   }
 `;
 
 export const RightArrowButton = styled.img`
   position: absolute;
-  right: -40px;
-  top: 190px;
   border-radius: 50%;
-  padding: 12px;
-  background-color: ${theme.colors.green};
+  top: 200px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  background-image: url("images/arrowRight.png");
+  background-image: url("images/rightArrow.png");
   background-repeat: no-repeat, repeat;
   color: ${theme.colors.white};
 
   &:hover {
     color: ${theme.colors.white};
     background-color: ${theme.colors.green};
-    background-image: url("images/arrowRight.png");
+    background-image: url("images/rightArrow.png");
     background-repeat: no-repeat, repeat;
   }
   ${breakpoints.xs} {
-    right: 8px;
+    right: 1px;
+    
+  }
+  ${breakpoints.md} {
+    right: 30px;
   }
   ${breakpoints.lg} {
-    right: -30px;
+    right: -100px;
   }
 `;
 
@@ -112,8 +125,7 @@ export const Warrper = styled.div`
   }
 `;
 export const ContentWarrper = styled.div`
-  margin:0px auto;
-  max-width: 370px;
+  margin: 0px auto;
 `;
 export const Title = styled.h1`
   text-align: center;
