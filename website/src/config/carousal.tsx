@@ -20,7 +20,7 @@ export const ServicesItems = [
     bgColor: theme.colors.dark,
     cardBgColor: theme.colors.white,
     titleColor: theme.colors.navy,
-    descriptionColor: theme.colors.navy,
+    descriptionColor: theme.colors.lightgrey,
   },
   {
     title: "Sapcodes Cutting Edge Cloud Services",
@@ -30,7 +30,7 @@ export const ServicesItems = [
     bgColor: theme.colors.dark,
     cardBgColor: theme.colors.white,
     titleColor: theme.colors.navy,
-    descriptionColor: theme.colors.navy,
+    descriptionColor: theme.colors.lightgrey,
   },
   {
     title: "Elevate Customer Experience",
@@ -40,35 +40,23 @@ export const ServicesItems = [
     bgColor: theme.colors.dark,
     cardBgColor: theme.colors.white,
     titleColor: theme.colors.navy,
-    descriptionColor: theme.colors.navy,
+    descriptionColor: theme.colors.lightgrey,
   },
 ];
 
 export const CustomItems = [
   {
     text: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-    author: "John Doe",
-    title: "CEO, Company Name",
+    author: "Eleanor Pena",
+    title: "CEO of Tukang Tikung",
     imageSrc: "images/AuthorImg1.png",
   },
   {
     text: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-    author: "John Doe",
-    title: "CEO, Company Name",
+    author: "Savannah Nguyen",
+    title: "CEO of Tukang Tikung",
     imageSrc: "images/AuthorImg2.png",
-  },
-  {
-    text: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-    author: "John Doe",
-    title: "CEO, Company Name",
-    imageSrc: "images/AuthorImg1.png",
-  },
-  {
-    text: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-    author: "John Doe",
-    title: "CEO, Company Name",
-    imageSrc: "images/AuthorImg2.png",
-  },
+  }
 ];
 
 export const EnvironmentItems = [

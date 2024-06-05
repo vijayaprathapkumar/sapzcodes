@@ -17,6 +17,7 @@ import {
   ServiceDescription,
   Wrapper,
   HeaderWarrper,
+  HeaderWarapper,
 } from "./ServicePage.styled";
 import { ServicesItems } from "@/config/carousal";
 
@@ -35,7 +36,7 @@ const ServiceComponent = () => {
 
   const ServiceHeader = () => {
     return (
-      <>
+      <HeaderWarapper>
         <Header>Our Services</Header>
         <Title>Experience Excellence: Delve into Our Range of Services</Title>
         <Subtitle>
@@ -44,7 +45,8 @@ const ServiceComponent = () => {
           integration and consulting services that elevate your operations to a
           new heights of efficiency and profitability.
         </Subtitle>
-      </>
+        <img src="/images/carsouleDots.png" alt="No Dots Img" />
+      </HeaderWarapper>
     );
   };
 
