@@ -5,8 +5,9 @@ import { styled } from "styled-components";
 
 interface CustomProps {
   isMobile?: boolean;
+  scrollDirection?: "up" | "down";
 }
-export const HeaderWraper = styled.div`
+export const HeaderWraper = styled.div<CustomProps>`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -17,6 +18,11 @@ export const HeaderWraper = styled.div`
   height: 65px;
   position: fixed;
   top: 0;
+  transition: 0.3s;
+
+  ${({ scrollDirection }) => scrollDirection === "down" && `
+    top: -65px;
+  `}
 
   ${breakpoints.xs} {
     padding: 0;
@@ -49,15 +55,17 @@ export const NavLink = styled.div`
     left: 34%;
   }
   ${breakpoints.xl} { 
-    left: 50%;
+    left: 48%;
   }
 `;
 export const Link = styled.a`
 color: ${theme.colors.white};
   text-decoration: none;
   position: relative;
+  transition: color 0.3s, text-decoration 0.3s; 
   &:hover {
     color: ${theme.colors.green};
+    text-decoration: underline;
   }
 
   &:active {
@@ -76,7 +84,7 @@ color: ${theme.colors.white};
     color: ${theme.colors.white};
    }
    ${breakpoints.xl} { 
-    bottom: 33px; 
+    bottom: 36px; 
     color: ${theme.colors.white};
    }
 
@@ -121,7 +129,7 @@ export const Contact = styled.div`
     color: ${theme.colors.white};
     height: 40px;
     width: 150px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid white;
     padding: 5px;
     
@@ -135,14 +143,14 @@ export const Contact = styled.div`
       color: black;
       width: 70px;
       font-size: 8px;
-      border-radius: 15px;
+      border-radius: 5px;
       border: 1px solid black;
       padding: 3px;
     }
   }
   ${breakpoints.md} {
     left: 50%;
-    bottom: 79px;
+    bottom: 83px;
   
     .contact-btn {
       background-color: transparent;
@@ -150,13 +158,13 @@ export const Contact = styled.div`
       height: 25px;
       font-size: 10px;
       width: 80px;
-      border-radius: 10px;
+      border-radius: 5px;
       border: 1px solid white;
       padding: 5px;
     }
   }
   ${breakpoints.lg} { 
-    left: 62%;
+    left: 63%;
 
     .contact-btn {
       height: 26px;

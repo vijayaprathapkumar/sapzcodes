@@ -17,7 +17,7 @@ export const TestimonialCard = styled.div`
   }
   ${breakpoints.lg} {
     width: 380px !important;
-    height: 298px;
+    height: 29  8px;
   }
 `;
 

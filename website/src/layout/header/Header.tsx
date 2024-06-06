@@ -11,10 +11,11 @@ import {
   MenuWrapper,
   NavLink,
 } from "./Header.styled";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const HeaderComponent = () => {
   const [isMobile, setMobile] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const toggleBar = () => {
     setMobile(!isMobile);
   };
@@ -29,8 +30,27 @@ const HeaderComponent = () => {
     });
   };
   
+  useEffect(() => {
+    let lastScrollY = window.pageYOffset;
+
+    const handleScroll = () => {
+      const currentScrollY = window.pageYOffset;
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <HeaderWraper>
+    <HeaderWraper scrollDirection={scrollDirection}>
       <LogoSection>
         <LogoImage src="images/sapzcodes.png" alt="Sapzcodes" />
       </LogoSection>

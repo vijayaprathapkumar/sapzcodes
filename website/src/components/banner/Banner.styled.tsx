@@ -26,13 +26,16 @@ export const BackgroundGradient = styled.div`
   top: 0;
   z-index: 0;
   ${breakpoints.xs} {
-    height: 98%;
+    height: 96%;
   }
   ${breakpoints.md} {
-    height: 99%;
+    height: 98%;
+  }
+  ${breakpoints.lg} {
+    height: 98.4%;
   }
   ${breakpoints.xl} {
-    height: 99.5%;
+    height: 99%;
   }
 `;
 export const MainContent = styled.div`
@@ -45,9 +48,9 @@ export const MainContent = styled.div`
   font-size: 40px;
   color: ${theme.colors.white};
   ${breakpoints.xs} {
-    top: 40px;
-    width: 130px;
-    font-weight: 400;
+    top: 30px;
+    width: 180px;
+    font-weight: 600;
     font-size: 10px;
   }
   ${breakpoints.md} {
@@ -56,18 +59,18 @@ export const MainContent = styled.div`
     width: 300px;
     z-index: 2;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
   }
   ${breakpoints.lg} {
     left: 4%;
-    width: 350px;
-    font-size: 25px;
+    width: 390px;
+    font-size: 22px;
   }
   ${breakpoints.xl} {
     top: 110px;
     left: 5%;
     width: 600px;
-    font-size: 40px;
+    font-size: 35px;
   }
 `;
 export const SubContent = styled.div`
@@ -81,25 +84,26 @@ export const SubContent = styled.div`
 
   ${breakpoints.xs} {
     top: 80px;
-    width: 220px;
-    font-size: 6px;
+    width: 200px;
+    font-size: 5px;
   }
   ${breakpoints.md} {
-    top: 145px;
+    top: 155px;
     left: 5%;
     width: 350px;
-    font-size: 10px;
+    font-size: 9px;
   }
   ${breakpoints.lg} {
-    top: 170px;
+    top: 180px;
     left: 4%;
-    width: 410px;
-    font-size: 15px;
+    width: 460px;
+    font-size: 12px;
   }
   ${breakpoints.xl} {
-    top: 280px;
+    top: 290px;
     left: 5%;
-    width: 600px;
+    width: 610px;
+    font-size: 14px;
   }
 `;
 export const ButtonBox = styled.div`
@@ -138,7 +142,7 @@ export const ButtonBox = styled.div`
     }
   }
   ${breakpoints.md} {
-    top: 220px;
+    top: 235px;
     left: 5%;
     height: 27px;
 

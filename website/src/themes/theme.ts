@@ -13,6 +13,9 @@ export interface Theme {
     lightnav: string;
     lightgreen: string;
     lightgrey: string;
+    light: string;
+    icon: string;
+    shadow: string;
   };
   fonts: {
     body: string;
@@ -34,7 +37,10 @@ export const theme: Theme = {
     white: "#fff",
     lightnav: "#e4e4e4",
     lightgreen: "#F0F7EC",
-    lightgrey:"#9A9AB0"
+    lightgrey:"#9A9AB0",
+    light:"#ECECEC",
+    icon:"#222631",
+    shadow:"#0000000F"
   },
   fonts: {
     body: "Arial, sans-serif",
