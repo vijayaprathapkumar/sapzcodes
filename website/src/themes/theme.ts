@@ -10,11 +10,12 @@ export interface Theme {
     grey: string;
     navy: string;
     dark: string;
-    light:string;
+    lightnav: string;
     lightgreen: string;
+    lightgrey: string;
+    light: string;
     icon: string;
     shadow: string;
-    lightnav: string;
   };
   fonts: {
     body: string;
@@ -24,26 +25,25 @@ export interface Theme {
 
 export const theme: Theme = {
   colors: {
-    primary: '#007bff',
-    secondary: '#6c757d',
-    accent: '#ffc107',
-    background: '#f8f9fa',
-    text: '#343a40',
+    primary: "#007bff",
+    secondary: "#6c757d",
+    accent: "#ffc107",
+    background: "#f8f9fa",
+    text: "#343a40",
     green: "#46D200",
-    grey:"#474A55",
-    navy:"#11142D",
-    dark:"#212121",
-    white:'#fff',
+    grey: "#474A55",
+    navy: "#11142D",
+    dark: "#212121",
+    white: "#fff",
+    lightnav: "#e4e4e4",
+    lightgreen: "#F0F7EC",
+    lightgrey:"#9A9AB0",
     light:"#ECECEC",
-    lightgreen:'#F0F7EC',
     icon:"#222631",
-    shadow:"#0000000F",
-    lightnav:"#E4E4E4"
+    shadow:"#0000000F"
   },
   fonts: {
-    body: 'Arial, sans-serif',
-    heading: 'Helvetica, sans-serif',
+    body: "Arial, sans-serif",
+    heading: "Helvetica, sans-serif",
   },
 };
-
-

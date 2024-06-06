@@ -3,6 +3,7 @@ import { theme } from "@/themes/theme";
 import { styled } from "styled-components";
 
 export const Wrapper = styled.div`
+  height: 672px;
   background-color: ${theme.colors.white};
   background: linear-gradient(
     90deg,
@@ -28,22 +29,54 @@ export const Wrapper = styled.div`
 export const Header = styled.div`
   font-size: 18px;
   font-weight: 600;
+  line-height: 21.6px;
   color: ${theme.colors.green};
 `;
 
 export const ServiceCard = styled.div<{ cardBgColor?: string }>`
   background-color: ${(props) => props.cardBgColor || theme.colors.white};
-  padding: 10px;
+  padding: 40px 20px 20px 25px;
   margin: 0 20px 0 20px;
   width: 300px !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 300px;
- 
+  border: 0.5px solid ${theme.colors.lightnav};
+  ${breakpoints.md} {
+    height:325px;
+  }
   ${breakpoints.lg} {
     width: 450px !important;
   }
   ${breakpoints.xl} {
-    width: 300px !important;
+    width: 320px !important;
+    height: 349px;
+  }
+`;
+
+export const HeaderWarapper = styled.div`
+  img {
+    position: absolute;
+   
+    left: -39px;
+    width: 130px;
+    height: 130px;
+  }
+  ${breakpoints.xs} {
+    img {
+      top: 340px;
+    }
+  ${breakpoints.md} {
+    img {
+      top: 380px;
+    }
+  ${breakpoints.lg} {
+    img {
+      top: 365px;
+    }
+  ${breakpoints.xl} {
+    img {
+      top: 260px;
+    }
   }
 `;
 
@@ -64,14 +97,14 @@ export const ServiceTitle = styled.h3<{ textColor?: string }>`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
-  color: ${(props) => props.textColor ||theme.colors.dark};
+  color: ${(props) => props.textColor || theme.colors.dark};
 `;
 
 export const ServiceDescription = styled.p<{ textColor?: string }>`
   font-size: 14px;
   margin-top: 20px;
   line-height: 1.5;
-  color: ${(props) => props.textColor || theme.colors.dark};
+  color: ${(props) => props.textColor || theme.colors.lightgrey};
   ${breakpoints.lg} {
     font-size: 17px;
     margin-top: 20px;
@@ -79,6 +112,7 @@ export const ServiceDescription = styled.p<{ textColor?: string }>`
   ${breakpoints.xl} {
     font-size: 15px;
     margin-top: 20px;
+    color: ${(props) => props.textColor || theme.colors.lightgrey};
   }
 `;
 
@@ -86,11 +120,22 @@ export const ArrowButtonsContainer = styled.div`
   display: flex;
   gap: 10px;
   justify-content: flex-end;
-  margin-right: 120px;
+  margin-right: 10px;
+  margin-top: -60px;
+  ${breakpoints.xs} {
+    margin-top: 0px;
+  }
+  ${breakpoints.md} {
+    margin-top: -40px;
+  }
+  ${breakpoints.lg} {
+    margin-top: -55px;
+  }
 `;
 
 export const StyledCardContainer = styled.div`
-  margin: 20px;
+  margin-top: 50px;
+  margin-left: 20px;
 `;
 
 export const SubHeader = styled.p`
@@ -113,11 +158,15 @@ export const Title = styled.h2`
     width: 640px;
     font-size: 34px;
   }
+  ${breakpoints.xl} {
+    width: 640px;
+    font-size: 40px;
+    line-height: 48px;
+  }
 `;
 
 export const Subtitle = styled.p`
-
-  color:  ${theme.colors.grey};
+  color: ${theme.colors.grey};
   margin-bottom: 32px;
   ${breakpoints.xs} {
     width: 300px;
@@ -131,8 +180,9 @@ export const Subtitle = styled.p`
     width: 640px;
   }
   ${breakpoints.xl} {
-    width: 840px;
-    font-size: 18px;
+    width: 920px;
+    font-size: 16px;
+    line-height: 24px;
   }
 `;
 
