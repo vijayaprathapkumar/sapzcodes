@@ -19,7 +19,7 @@ const EnvironmentComponent = () => {
     <>
       <Heading>Our Working Environment</Heading>
       <SubHeading>
-        <Bolder>SAPCODES</Bolder> empowering work environment, where innovation thrives and
+        <Bolder>SAPZCODES</Bolder> empowering work environment, where innovation thrives and
         collaboration fuels success. Experience a dynamic atmosphere that
         nurtures growth and brings out the best in everyone.
       </SubHeading>

@@ -16,14 +16,14 @@ export const ServicesItems = [
     title: "Drive Business Excellence with Our Dedicated Center of Excellence",
     icon: <img src="images/MoneyCoinDollar.png" alt="No MoneyCoinDollar" />,
     description:
-      "50+ SAP experts at SAPCODES drive excellence with a dedicated Center of Excellence. We ensure compliance and foster continuous improvements for the highest standards.",
+      "50+ SAP experts at SAPZCODES drive excellence with a dedicated Center of Excellence. We ensure compliance and foster continuous improvements for the highest standards.",
     bgColor: theme.colors.dark,
     cardBgColor: theme.colors.white,
     titleColor: theme.colors.navy,
     descriptionColor: theme.colors.lightgrey,
   },
   {
-    title: "SAPCODES Cutting Edge Cloud Services",
+    title: "SAPZCODES Cutting Edge Cloud Services",
     icon: <img src="images/LightBulb.png" alt="No LightBulb" />,
     description:
       "Boost productivity, streamline workflows, and reduce costs with our expert team and cutting-edge technologies. Scale and succeed in today's business landscape.",
@@ -36,7 +36,7 @@ export const ServicesItems = [
     title: "Elevate Customer Experience",
     icon: <img src="images/UserProfile.png" alt="No UserProfile" />,
     description:
-      "SAPCODES E-commerce Services. Engage customers uniquely, foster repeat business, and maximize your potential for success.",
+      "SAPZCODES E-commerce Services. Engage customers uniquely, foster repeat business, and maximize your potential for success.",
     bgColor: theme.colors.dark,
     cardBgColor: theme.colors.white,
     titleColor: theme.colors.navy,

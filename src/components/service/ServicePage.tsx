@@ -41,7 +41,7 @@ const ServiceComponent = () => {
         <Header>Our Services</Header>
         <Title>Experience Excellence: Delve into Our Range of Services</Title>
         <Subtitle>
-          <Bolder>SPACODES</Bolder> stands as epitome of innovation in management and technology
+          <Bolder>SAPZCODES</Bolder> stands as epitome of innovation in management and technology
           consulting. As industry pioneers, we offer a dynamic suite of systems
           integration and consulting services that elevate your operations to a
           new heights of efficiency and profitability.
