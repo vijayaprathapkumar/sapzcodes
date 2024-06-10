@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
 import { FooterDetails } from '@/config/footer';
-import { Bootomwrapper, FacebookIcon, Footereraper, GoogleIcon, IconWrapper, InstaIcon, LinkedInIcon, Maindiv, TwitterIcon } from './Footer.styled';   
+import { Bootomwrapper, FacebookIcon, Footereraper, GoogleIcon, IconWrapper, InstaIcon, LinkedInIcon, Maindiv, TwitterIcon } from './Footer.styled';
 
 const FooterComponent = () => {
+    const currentYear = new Date().getFullYear();
+
     return (
         <Fragment>
             <Footereraper>
@@ -26,13 +28,23 @@ const FooterComponent = () => {
             </Footereraper>
             <hr />
             <Bootomwrapper>
-                <p>Copyright © 2024 Sapzcodes. All Rights Reserved.</p>
+                <p>Copyright © {currentYear} Sapzcodes. All Rights Reserved.</p>
                 <IconWrapper>
-                    <FacebookIcon />
-                    <GoogleIcon />
-                    <InstaIcon />
-                    <TwitterIcon />
-                    <LinkedInIcon />
+                    <a href="https://www.facebook.com">
+                        <FacebookIcon />
+                    </a>
+                    <a href="https://www.google.com">
+                        <GoogleIcon />
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <InstaIcon />
+                    </a>
+                    <a href="https://twitter.com">
+                        <TwitterIcon />
+                    </a>
+                    <a href="https://www.linkedin.com">
+                        <LinkedInIcon />
+                    </a>
                 </IconWrapper>
             </Bootomwrapper>
         </Fragment>

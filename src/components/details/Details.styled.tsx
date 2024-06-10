@@ -40,7 +40,7 @@ export const MainWrapper = styled.div<{
     ${breakpoints.xs} {
         flex-direction:column;
         .image{
-            margin-top:700px; 
+            margin-top:870px; 
         }
         .dots{
             margin-top:-70px;
@@ -57,7 +57,7 @@ export const MainWrapper = styled.div<{
     }
     ${breakpoints.sm}{
         .image{
-            top:300px;
+            top:850px;
         }
         .dark{
             margin-top:500px;
@@ -71,7 +71,7 @@ export const MainWrapper = styled.div<{
     ${breakpoints.md} {
         flex-direction:column;
         .image{
-            top:1050px; 
+            top:930px; 
         }
         .dots{
             margin-top:-30px;
@@ -89,7 +89,7 @@ export const MainWrapper = styled.div<{
     ${breakpoints.lg} {
         flex-direction:row;
         .image{
-            top:860px; 
+            top:750px; 
         }
         .dark{
             margin-top:360px;
@@ -102,7 +102,7 @@ export const MainWrapper = styled.div<{
     }
     ${breakpoints.xl} {
         .image{
-            top:950px; 
+            top:800px; 
         }     
     }
 `;
@@ -208,7 +208,7 @@ export const AboutDiv = styled.div`
     }
     ${breakpoints.lg} {
         margin-right: 100px;
-        margin-left: 80px;
+        margin-left:60px;
         margin-top:25px;
         h2{
             font-size:20px;
@@ -222,7 +222,7 @@ export const AboutDiv = styled.div`
     }
     ${breakpoints.xl} {
         margin-right: 200px;
-        margin-left: 80px;
+        margin-left: 60px;
         h2{
             font-size:23px;
         }
