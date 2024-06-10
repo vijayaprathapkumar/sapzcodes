@@ -17,7 +17,7 @@ export default function Home() {
       <ServiceComponent/>
       <DetailComponent detail={detailsAbout} />
       <DetailComponent detail={detailCapabilitiy} />
-      <CustomerReviewComponent/>
+      {/* <CustomerReviewComponent/> */}
       <EnvironmentComponent/>
       <DetailComponent detail={detailsCareer} />
       <ContactComponent/>

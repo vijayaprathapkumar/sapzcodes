@@ -171,3 +171,8 @@ export const ContentWarrper = styled.div`
     font-size: 16px;
   }
 `;
+
+export const Bolder = styled.span`
+  font-weight: bold;
+  font-size: 16px;
+`;

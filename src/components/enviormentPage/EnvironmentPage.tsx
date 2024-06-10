@@ -10,6 +10,7 @@ import {
   SliderContainer,
   ContentWarrper,
   SubHeading,
+  Bolder,
 } from "./EnvironmentPage.Styled";
 import { EnvironmentItems } from "@/config/carousal";
 
@@ -18,7 +19,7 @@ const EnvironmentComponent = () => {
     <>
       <Heading>Our Working Environment</Heading>
       <SubHeading>
-        Sapcodes empowering work environment, where innovation thrives and
+        <Bolder>SAPCODES</Bolder> empowering work environment, where innovation thrives and
         collaboration fuels success. Experience a dynamic atmosphere that
         nurtures growth and brings out the best in everyone.
       </SubHeading>
