@@ -48,13 +48,13 @@ export const MainContent = styled.div`
   font-size: 40px;
   color: ${theme.colors.white};
   ${breakpoints.xs} {
-    top: 30px;
+    top: 38px;
     width: 180px;
     font-weight: 600;
     font-size: 10px;
   }
   ${breakpoints.md} {
-    top: 60px;
+    top: 75px;
     left: 5%;
     width: 300px;
     z-index: 2;
@@ -62,12 +62,13 @@ export const MainContent = styled.div`
     font-size: 18px;
   }
   ${breakpoints.lg} {
+  top: 105px;
     left: 4%;
     width: 390px;
-    font-size: 22px;
+    font-size: 21px;
   }
   ${breakpoints.xl} {
-    top: 110px;
+    top: 150px;
     left: 5%;
     width: 600px;
     font-size: 35px;
@@ -81,26 +82,29 @@ export const SubContent = styled.div`
   z-index: 2;
   line-height: 1.8;
   color: ${theme.colors.white};
+  .bold-text {
+  font-weight: bold;
+}
 
   ${breakpoints.xs} {
-    top: 80px;
+    top: 85px;
     width: 200px;
     font-size: 5px;
   }
   ${breakpoints.md} {
-    top: 155px;
+    top: 165px;
     left: 5%;
-    width: 350px;
-    font-size: 9px;
+    width: 320px;
+    font-size: 7px;
   }
   ${breakpoints.lg} {
-    top: 180px;
+    top: 210px;
     left: 4%;
     width: 460px;
-    font-size: 12px;
+    font-size: 10px;
   }
   ${breakpoints.xl} {
-    top: 290px;
+    top: 325px;
     left: 5%;
     width: 610px;
     font-size: 14px;
@@ -134,15 +138,15 @@ export const ButtonBox = styled.div`
     }
   }
   ${breakpoints.xs} {
-    top: 125px;
-    height: 20px;
+    top: 130px;
+    height: 15px;
     .get-btn {
-      width: 50px;
+      width: 45px;
       font-size: 5px;
     }
   }
   ${breakpoints.md} {
-    top: 235px;
+    top: 225px;
     left: 5%;
     height: 27px;
 
@@ -152,7 +156,7 @@ export const ButtonBox = styled.div`
     }
   }
   ${breakpoints.lg} {
-    top: 300px;
+    top: 290px;
     left: 4%;
     height: 30px;
     .get-btn {
@@ -161,7 +165,7 @@ export const ButtonBox = styled.div`
     }
   }
   ${breakpoints.xl} {
-    top: 400px;
+    top: 450px;
     left: 5%;
     height: 50px;
     .get-btn {
