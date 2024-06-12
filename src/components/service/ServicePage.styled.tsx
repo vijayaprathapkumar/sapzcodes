@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 
 export const Wrapper = styled.div`
   height: 672px;
+  margin-left: 35px;
   background-color: ${theme.colors.white};
   background: linear-gradient(
     90deg,
@@ -11,6 +12,9 @@ export const Wrapper = styled.div`
     ${theme.colors.lightgreen} 50%
   );
 
+  ${breakpoints.xs} {
+    margin-left: -10px;
+  }
   ${breakpoints.lg} {
     background: linear-gradient(
       90deg,
@@ -19,6 +23,7 @@ export const Wrapper = styled.div`
     );
   }
   ${breakpoints.xl} {
+    margin-left: 30px;
     background: linear-gradient(
       90deg,
       ${theme.colors.white} 998px,
@@ -41,8 +46,12 @@ export const ServiceCard = styled.div<{ cardBgColor?: string }>`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 300px;
   border: 0.5px solid ${theme.colors.lightnav};
+   ${breakpoints.xs} {
+    height: 335px;
+  }
   ${breakpoints.md} {
-    height:325px;
+   width: 330px !important;
+    height: 325px;
   }
   ${breakpoints.lg} {
     width: 450px !important;
@@ -63,11 +72,17 @@ export const HeaderWarapper = styled.div`
   }
   ${breakpoints.xs} {
     img {
-      top: 340px;
+      top: 350px;
+      left: -29px;
+      width: 100px;
+      height: 100px;
     }
   ${breakpoints.md} {
     img {
       top: 380px;
+      left: -29px;
+      width: 100px;
+      height: 100px;
     }
   ${breakpoints.lg} {
     img {
@@ -76,6 +91,9 @@ export const HeaderWarapper = styled.div`
   ${breakpoints.xl} {
     img {
       top: 260px;
+      left: -39px;
+      width: 130px;
+      height: 130px;
     }
   }
 `;
@@ -168,6 +186,7 @@ export const Title = styled.h2`
 export const Subtitle = styled.p`
   color: ${theme.colors.grey};
   margin-bottom: 32px;
+
   ${breakpoints.xs} {
     width: 300px;
     font-size: 14px;
@@ -193,4 +212,9 @@ export const HeaderWarrper = styled.div`
   ${breakpoints.xs} {
     top: 20px;
   }
+`;
+
+export const Bolder = styled.span`
+  font-weight: bold;
+  font-size: 18px;
 `;
