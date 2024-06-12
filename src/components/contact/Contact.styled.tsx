@@ -56,7 +56,7 @@ hr {
     }
     ${breakpoints.xl} {
     width: 430px;
-    left: 10%;
+    left: 7%;
     }
 `;
 export const LocationSection = styled.div`
@@ -74,16 +74,45 @@ margin-top: 30px;
 export const ContactSection = styled.div`
 margin-top: 30px;
 
-.part-sec{
-    display: flex;
-    margin-top: 12px;
-    gap: 10px;
-
- }
- .envelope{
-    height: 20px;
+.envelope-part{
+ display: flex;
+ align-items: center;
+ margin-top: 5px;
+ gap: 15px;
+}
+.envelope-part a {
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+  margin-right: 20px; 
+}  
+.envelope-part p {
+  margin-left: 10px; 
+}
+.envelope{
+  height: 20px;
+  margin-top: 3px;
    width: 20px;
  }
+.part-sec{
+    display: flex;
+    margin-top: 14px;
+    gap: 10px;
+    align-items: center;
+ }
+.part-sec a {
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+  margin-right: 20px; 
+}  
+.part-sec p {
+  margin-left: 10px; 
+}
+.whatsapp-icon {    
+  color: #A9A9A9;
+  font-size: 20px;
+}
  .phone{
     height: 20px;
    width: 20px;

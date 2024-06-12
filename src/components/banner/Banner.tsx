@@ -21,9 +21,9 @@ const BannerComponent = () => {
           className="banner-image" />
       </div>
     </SectionWrapper><MainContent>
-        Propel our business and achieve new height with Sapcodes transformative solutions.
+        Propel our business and achieve new height with SAPZCODES transformative solutions.
       </MainContent><SubContent>
-        Streamline processes, gain insights, and make data-driven decisions with VMA Tech Labs. Our tailored technology propels success for businesses of all sizes. Embrace the future of business management, unlock growth opportunities, and thrive with us today.
+        Streamline processes, gain insights, and make data-driven decisions with  <span className="bold-text">SAPZCODES</span>. Our tailored technology propels success for businesses of all sizes. Embrace the future of business management, unlock growth opportunities, and thrive with us today.
       </SubContent><ButtonBox>
         <button className="get-btn">
           Get A Quote
