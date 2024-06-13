@@ -1,6 +1,7 @@
 import breakpoints from "@/themes/breakpoints";
 import { theme } from "@/themes/theme";
 import { styled } from "styled-components";
+
 export const Container = styled.div`
   background: url("images/environment.png"), rgba(0, 0, 0, 0.6);
   background-size: cover;
@@ -9,12 +10,10 @@ export const Container = styled.div`
   position: relative;
   margin-top: 80px;
   ${breakpoints.xs} {
-    height: 70vh;
-  }
-  ${breakpoints.lg} {
-    height: 92vh;
+    height: 50vh;
   }
 `;
+
 export const Content = styled.div`
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -34,20 +33,6 @@ export const LeftArrow = styled.img`
   width: 32px;
   height: 32px;
   filter: brightness(0) invert(1);
-  position: absolute;
-  left: -22%;
-  ${breakpoints.xs} {
-    left: -10%;
-  }
-  ${breakpoints.md} {
-    left: -20%;
-  }
-  ${breakpoints.lg} {
-    left: -3%;
-  }
-  ${breakpoints.xl} {
-    left: -22%;
-  }
 `;
 
 export const RightArrow = styled.img`

@@ -3,6 +3,7 @@ import {
   ArrowImage,
   BackgroundGradient,
   ButtonBox,
+  ContentWrapper,
   MainContent,
   SectionWrapper,
   SubContent,
@@ -16,32 +17,25 @@ interface BannerMain {
   marginTop: string;
   width: string;
 }
-const BannerComponent = ({ bannerMain }:{ bannerMain: BannerMain[] }) => {
-  const { title, subTitle, button, image, marginTop, width} = bannerMain[0];
+const BannerComponent = ({ bannerMain }: { bannerMain: BannerMain[] }) => {
+  const { title, subTitle, button, image, marginTop, width } = bannerMain[0];
   return (
-      <><SectionWrapper>
-      <div className="set">
-        <div>
-          <BackgroundGradient />
-        </div>
-        <img
-          src={image}
-          alt="banner"
-          className="banner-image" />
-      </div>
-    </SectionWrapper>
-    <MainContent marginTop={marginTop} width={width}>
-        {title}
-      </MainContent>
-      <SubContent>
-        {subTitle}
-      </SubContent><ButtonBox>
-        <button className="get-btn">
-          {button}
-          <ArrowImage src="images/button-Arrow.png" alt="arrow" />
-        </button>
-      </ButtonBox></>
-
+    <>
+      <SectionWrapper>
+        <BackgroundGradient />
+        <img src={image} alt="banner" className="banner-image" />
+        <ContentWrapper  className="layout-gap">
+          <MainContent marginTop={marginTop} width={width}>
+            {title}
+          </MainContent>
+          <SubContent>{subTitle}</SubContent>
+          <ButtonBox>
+              {button}
+              <ArrowImage src="images/button-Arrow.png" alt="arrow" />
+          </ButtonBox>
+        </ContentWrapper>
+      </SectionWrapper>
+    </>
   );
 };
 

@@ -10,7 +10,7 @@ import {
 
 const ContactComponent = () => {
   return (
-    <ContactWrapper>
+    <ContactWrapper className="layout-gap">
       <AddressContent>
         <h5 className="conct">CONTACT US</h5>
         <h2 className="get-cont">Get in touch with us.</h2>

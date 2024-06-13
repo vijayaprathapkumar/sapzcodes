@@ -2,9 +2,9 @@
 import { careerSec} from "@/config/body";
 import BannerComponent from "../banner/Banner";
 import DetailComponent from "../details/Details";
-import ServiceComponent from "../service/ServicePage";
 import { ServiceCareer, ServicesItemsCarrer } from "@/config/carousal";
 import { BannerCarrer } from "@/config/banner";
+import ServiceComponent from "../serviceComponent/serviceCarousel";
 
 
 

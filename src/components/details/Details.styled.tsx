@@ -9,7 +9,6 @@ export const MainWrapper = styled.div<{
 }>`
     display: flex;
     margin-top: 60px;
-    padding: 30px;    
     background: ${({background,imageAlignment }) => (imageAlignment === "right" ? `${background}` : `none`)};
     .image{
         height:40px;

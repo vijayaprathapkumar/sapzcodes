@@ -1,5 +1,5 @@
 "use client"
-import Servicepage from "@/components/helper-component/servicePage/Servicepage";
+import Servicepage from "@/components/ServicePage/Servicepage";
 
 const services = () => {
   return <Servicepage />;

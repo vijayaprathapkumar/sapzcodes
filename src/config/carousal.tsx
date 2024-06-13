@@ -1,19 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import { theme } from "@/themes/theme";
 
-export const ServiceDash = [
-  {
-    headerTitle:"Our Services",
-    title:"Experience Excellence: Delve into Our Range of Services",
-    subTitle:"SAPZCODES stands as epitome of innovation in management and technology consulting. As industry pioneers, we offer a dynamic suite of systems integration and consulting services that elevate your operations to a new heights of efficiency and profitability."
-  }
-];
+export const ServicecarouselTitle = {
+  title: "Our Services",
+  subTitle: "Experience Excellence: Delve into Our Range of Services",
+  description:
+    "SAPZCODES stands as epitome of innovation in management and technology consulting. As industry pioneers, we offer a dynamic suite of systems integration and consulting services that elevate your operations to a new heights of efficiency and profitability.",
+};
 export const ServiceCareer = [
   {
-    headerTitle:"Lets have a Walk",
-    title:"Opportunities That We Provide You",
-    subTitle:"SAPZCODES is an innovative management and technology consulting firm. We provide our Clients a comprehensive suite of systems integration"
-  }
+    headerTitle: "Lets have a Walk",
+    title: "Opportunities That We Provide You",
+    subTitle:
+      "SAPZCODES is an innovative management and technology consulting firm. We provide our Clients a comprehensive suite of systems integration",
+  },
 ];
 export const ServicesItems = [
   {

@@ -11,13 +11,13 @@ export const HeaderWraper = styled.div<CustomProps>`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 2rem;
   color: ${theme.colors.white};
   z-index: 50;
   width: 100%;
   height: 65px;
   position: fixed;
   top: 0;
+  left:0;
   transition: 0.3s;
 
   ${({ scrollDirection }) => scrollDirection === "down" && `
