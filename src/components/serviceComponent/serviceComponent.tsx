@@ -19,7 +19,9 @@ import {
   Wrapper,
   HeaderWarrper,
   HeaderWarapper,
-} from "./ServicePage.styled";
+  ViewMoreLink,
+} from "./serviceComponent.styled";
+import { IoIosArrowForward } from "react-icons/io";
 
 interface ServiceItem {
   cardBgColor: string;
@@ -73,23 +75,42 @@ const ServiceComponent = ({
     );
   };
 
-  const ServiceItemElements = serviceItems.map((item, index) => (
-    <StyledCardContainer key={index} >
-      <ServiceCard cardBgColor={item.cardBgColor}>
-        <ServiceIcon bgColor={item.bgColor}>{item.icon}</ServiceIcon>
-        <ServiceTitle textColor={item.titleColor}>{item.title}</ServiceTitle>
-        <ServiceDescription textColor={item.descriptionColor}>
-          {item.description}
-        </ServiceDescription>
-      </ServiceCard>
-    </StyledCardContainer>
-  ));
+  const ServiceItems = () => {
+    return ServicesItems.map((item: ServiceItem, index: number) => {
+      const {
+        cardBgColor,
+        bgColor,
+        icon,
+        title,
+        titleColor,
+        descriptionColor,
+        description,
+      } = item;
+
+      
+      return (
+        <StyledCardContainer key={index}>
+          <ServiceCard cardBgColor={cardBgColor}>
+            <ServiceIcon bgColor={bgColor}>{icon}</ServiceIcon>
+            <ServiceTitle textColor={titleColor}>{title}</ServiceTitle>
+            <ServiceDescription textColor={descriptionColor}>
+              {description}
+            </ServiceDescription>
+            <ViewMoreLink cardBgColor={cardBgColor}>
+              View More <IoIosArrowForward />
+            </ViewMoreLink>
+          </ServiceCard>
+        </StyledCardContainer>
+      );
+    });
+  };
+
   return (
     <Wrapper>
       <HeaderWarrper>{ServiceHeader()}</HeaderWarrper>
       {ArrowButtons()}
       <CustomSlide settings={ServiceSettings} ref={sliderRef}>
-        {ServiceItemElements}
+        {ServiceItems()}
       </CustomSlide>
     </Wrapper>
   );

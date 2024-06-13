@@ -11,7 +11,7 @@ export const Menus = [
   },
   {
     name: "Services",
-    path: "/about",
+    path: "/services",
   },
   {
     name: "Careers",
