@@ -49,13 +49,13 @@ export const NavLink = styled.div`
     left: 0;
   }
   ${breakpoints.md} {
-    left: 20%;
+    left: 0%;
   }
   ${breakpoints.lg} { 
-    left: 34%;
+    left: 13%;
   }
   ${breakpoints.xl} { 
-    left: 48%;
+    left: 34%;
   }
 `;
 export const Link = styled.a`

@@ -8,7 +8,16 @@ import {
   SubContent,
 } from "./Banner.styled";
 
-const BannerComponent = () => {
+interface BannerMain {
+  image: string;
+  title: string;
+  subTitle: string;
+  button: string;
+  marginTop: string;
+  width: string;
+}
+const BannerComponent = ({ bannerMain }:{ bannerMain: BannerMain[] }) => {
+  const { title, subTitle, button, image, marginTop, width} = bannerMain[0];
   return (
       <><SectionWrapper>
       <div className="set">
@@ -16,17 +25,19 @@ const BannerComponent = () => {
           <BackgroundGradient />
         </div>
         <img
-          src="images/banner.png"
+          src={image}
           alt="banner"
           className="banner-image" />
       </div>
-    </SectionWrapper><MainContent>
-        Propel our business and achieve new height with SAPZCODES transformative solutions.
-      </MainContent><SubContent>
-        Streamline processes, gain insights, and make data-driven decisions with  <span className="bold-text">SAPZCODES</span>. Our tailored technology propels success for businesses of all sizes. Embrace the future of business management, unlock growth opportunities, and thrive with us today.
+    </SectionWrapper>
+    <MainContent marginTop={marginTop} width={width}>
+        {title}
+      </MainContent>
+      <SubContent>
+        {subTitle}
       </SubContent><ButtonBox>
         <button className="get-btn">
-          Get A Quote
+          {button}
           <ArrowImage src="images/button-Arrow.png" alt="arrow" />
         </button>
       </ButtonBox></>

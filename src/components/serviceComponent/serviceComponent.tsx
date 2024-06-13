@@ -19,10 +19,8 @@ import {
   Wrapper,
   HeaderWarrper,
   HeaderWarapper,
-  Bolder,
   ViewMoreLink,
 } from "./serviceComponent.styled";
-import { ServicesItems } from "@/config/carousal";
 import { IoIosArrowForward } from "react-icons/io";
 
 interface ServiceItem {
@@ -34,21 +32,27 @@ interface ServiceItem {
   descriptionColor: string;
   description: string;
 }
-
-const ServiceComponent = () => {
+interface ServiceMain {
+  headerTitle: string;
+  title: string;
+  subTitle: string;
+}
+interface ServiceComponentProps {
+  serviceMain: ServiceMain[];
+  serviceItems: ServiceItem[];
+}
+const ServiceComponent = ({
+  serviceMain,
+  serviceItems,
+}: ServiceComponentProps) => {
   const sliderRef = useRef(null);
-
+  const { headerTitle, title, subTitle } = serviceMain[0];
   const ServiceHeader = () => {
     return (
       <HeaderWarapper>
-        <Header>Our Services</Header>
-        <Title>Experience Excellence: Delve into Our Range of Services</Title>
-        <Subtitle>
-          <Bolder>SAPZCODES</Bolder> stands as epitome of innovation in management and technology
-          consulting. As industry pioneers, we offer a dynamic suite of systems
-          integration and consulting services that elevate your operations to a
-          new heights of efficiency and profitability.
-        </Subtitle>
+        <Header>{headerTitle}</Header>
+        <Title>{title}</Title>
+        <Subtitle>{subTitle}</Subtitle>
         <img src="/images/carsouleDots.png" alt="No Dots Img" />
       </HeaderWarapper>
     );

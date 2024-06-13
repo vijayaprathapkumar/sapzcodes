@@ -8,14 +8,16 @@ import CustomerReviewComponent from "@/components/customerReview/CustomerReview"
 import { detailsAbout ,detailCapabilitiy,detailsCareer } from '@/config/body';
 import FooterComponent from "@/layout/footer/Footer";
 import ContactComponent from "@/components/contact/Contact";
+import { ServiceDash, ServicesItems } from "@/config/carousal";
+import { BannerDash } from "@/config/banner";
 import ServiceComponent from "@/components/serviceComponent/serviceComponent";
 
 export default function Home() {
   return (
     <>
       <HeaderComponent />
-      <BannerComponent />
-      <ServiceComponent/>
+      <BannerComponent bannerMain={BannerDash}/>
+      <ServiceComponent serviceMain={ServiceDash} serviceItems={ServicesItems}/>
       <DetailComponent detail={detailsAbout} />
       <DetailComponent detail={detailCapabilitiy} />
       {/* <CustomerReviewComponent/> */}
@@ -26,3 +28,4 @@ export default function Home() {
     </>
   );
 }
+  

@@ -51,3 +51,21 @@ export const detailsCareer = {
     imgDark:"/images/dark.png",
     imgLight:"/images/light.png",
 };
+
+export const careerSec = {
+    imageAlignment: 'left',
+    image: "/images/Carrier.png",
+    marginTop: "-100px",
+    marginLeft:"0px",
+    height: "400px",
+    width: "450px",
+    title: "Why Sapzcodes",
+    subTitle: "Help us to build your career",
+    description: "We are awarded with the SAP Partner Center of Expertise (PCoE) Certification, which hands down the most rigorous compliance...",
+    button: {
+        text: 'Openings',
+    },
+    imgDots:"/images/Dots (2).png",
+    imgDark:"/images/dark.png",
+    imgLight:"/images/light.png",
+};

@@ -2,6 +2,10 @@ import breakpoints from "@/themes/breakpoints";
 import { theme } from "@/themes/theme";
 import { styled } from "styled-components";
 
+interface MainContentProps {
+  marginTop: string;
+  width: string;
+}
 export const SectionWrapper = styled.section`
   width: 100%;
   overflow: hidden;
@@ -38,11 +42,12 @@ export const BackgroundGradient = styled.div`
     height: 99%;
   }
 `;
-export const MainContent = styled.div`
+export const MainContent = styled.div<MainContentProps>`
   position: absolute;
+  margin-top: ${(props) => props.marginTop};
+  width: ${(props) => props.width};
   top: 20%;
   left: 8%;
-  width: 750px;
   z-index: 2;
   font-weight: 600;
   font-size: 40px;
@@ -70,7 +75,7 @@ export const MainContent = styled.div`
   ${breakpoints.xl} {
     top: 150px;
     left: 5%;
-    width: 600px;
+    width: ${(props) => props.width};
     font-size: 35px;
   }
 `;
