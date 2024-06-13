@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useRef } from "react";
 import CustomSlide, {
   ServiceSettings,
@@ -19,8 +20,10 @@ import {
   HeaderWarrper,
   HeaderWarapper,
   Bolder,
-} from "./ServicePage.styled";
+  ViewMoreLink,
+} from "./serviceComponent.styled";
 import { ServicesItems } from "@/config/carousal";
+import { IoIosArrowForward } from "react-icons/io";
 
 interface ServiceItem {
   cardBgColor: string;
@@ -79,7 +82,7 @@ const ServiceComponent = () => {
         descriptionColor,
         description,
       } = item;
-      console.log('index',index);
+
       
       return (
         <StyledCardContainer key={index}>
@@ -89,6 +92,9 @@ const ServiceComponent = () => {
             <ServiceDescription textColor={descriptionColor}>
               {description}
             </ServiceDescription>
+            <ViewMoreLink cardBgColor={cardBgColor}>
+              View More <IoIosArrowForward />
+            </ViewMoreLink>
           </ServiceCard>
         </StyledCardContainer>
       );
