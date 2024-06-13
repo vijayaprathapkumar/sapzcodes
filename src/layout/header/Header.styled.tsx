@@ -58,6 +58,7 @@ export const NavLink = styled.div`
     left: 34%;
   }
 `;
+
 export const Link = styled.a`
 color: ${theme.colors.white};
   text-decoration: none;

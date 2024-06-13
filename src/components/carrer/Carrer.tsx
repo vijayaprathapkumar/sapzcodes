@@ -12,7 +12,7 @@ const CareerComponents = () => {
  
     return(
         <><BannerComponent bannerMain={BannerCarrer}/>
-         <ServiceComponent serviceMain={ServiceCareer} serviceItems={ServicesItemsCarrer}/>
+         <ServiceComponent />
         <DetailComponent detail={careerSec} />
         </>
     );
