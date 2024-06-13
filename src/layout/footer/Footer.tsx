@@ -1,3 +1,4 @@
+"use client";
 import React, { Fragment } from 'react';
 import { FooterDetails } from '@/config/footer';
 import { Bootomwrapper, FacebookIcon, Footereraper, GoogleIcon, IconWrapper, InstaIcon, LinkedInIcon, Maindiv, TwitterIcon } from './Footer.styled';   

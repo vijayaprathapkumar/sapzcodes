@@ -5,6 +5,7 @@ import { ThemeProvider } from "./theme-provider";
 import { Poppins } from 'next/font/google';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import HomePageLayout from "@/layout/Layout";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -27,7 +28,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className}`}>
         <StyledComponentsRegistry>
+          <HomePageLayout>
           <ThemeProvider>{children}</ThemeProvider>
+          </HomePageLayout>
         </StyledComponentsRegistry>
       </body>
     </html>

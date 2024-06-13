@@ -6,12 +6,17 @@ export const Menus = [
     path: "/",
   },
   {
+    name: "Corporate Training",
+    path: "/corporate-training",
+  },
+  {
     name: "Services",
     path: "/about",
   },
   {
     name: "Careers",
-    path: "/contact",
+    path: "/careers",
   },
+
 ];
 

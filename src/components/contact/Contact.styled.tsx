@@ -77,7 +77,7 @@ margin-top: 30px;
 .envelope-part{
  display: flex;
  align-items: center;
- margin-top: 5px;
+ margin-top: 15px;
  gap: 15px;
 }
 .envelope-part a {
@@ -96,7 +96,7 @@ margin-top: 30px;
  }
 .part-sec{
     display: flex;
-    margin-top: 14px;
+    margin-top: 17px;
     gap: 10px;
     align-items: center;
  }
