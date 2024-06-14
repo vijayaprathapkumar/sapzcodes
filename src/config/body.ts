@@ -25,8 +25,8 @@ export const detailCapabilitiy = {
     height: "350px",
     width: "380px",
     title: "OUR CORE CAPABILITIES",
-    subTitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, ad!",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci odit, in inventore obcaecati, vitae id provident, nihil vero voluptas eius eveniet veritatis reprehenderit rerum. Dicta reiciendis maiores quos explicabo nisi!",
+    subTitle: "System Integration and Customization",
+    description: "Tailoring SAP systems to work seamlessly with existing infrastructure and business processes.",
     button: {
         text: 'Explore',
     },
