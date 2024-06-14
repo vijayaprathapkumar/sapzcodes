@@ -1,5 +1,6 @@
-import { IoIosArrowForward } from "react-icons/io";
+import { useEffect, useState } from "react";
 import {
+  ButtonStyled,
   CardDescription,
   CardIcon,
   CardTitle,
@@ -7,39 +8,43 @@ import {
   StyledCardContainer,
   ViewMoreLink,
 } from "./Card.styled";
+import Link from "next/link";
 
-interface ServiceItem {
-  cardBgColor: string;
-  bgColor: string;
-  icon: JSX.Element;
-  title: string;
-  titleColor: string;
-  descriptionColor: string;
-  description: string;
-}
+const MediumCard = ({ cardItems }: any) => {
+  const { icon, title, description, isExpanded, viewMore } = cardItems;
 
-const MediumCard = ({cardItems}:any) => {
-  const {
-    cardBgColor,
-    bgColor,
-    icon,
-    title,
-    titleColor,
-    descriptionColor,
-    description,
-  } = cardItems;
+  const { text, textIcon, action, href } = viewMore || {};
+
+  const truncatedDescription =
+    description.length > 200 && !isExpanded
+      ? `${description.slice(0, 190)}...`
+      : description;
+
+  const renderViewMore = () => {
+    if (href) {
+      return (
+        <ViewMoreLink href={`/services`}>
+          {text} {textIcon}
+        </ViewMoreLink>
+      );
+    }
+
+    return (
+      <ButtonStyled onClick={action}>
+        {text} {textIcon}
+      </ButtonStyled>
+    );
+  };
 
   return (
     <StyledCardContainer>
-      <CardWrapper cardBgColor={cardBgColor}>
-        <CardIcon bgColor={bgColor}>{icon}</CardIcon>
-        <CardTitle textColor={titleColor}>{title}</CardTitle>
-        <CardDescription textColor={descriptionColor}>
-          {description}
+      <CardWrapper isExpanded={isExpanded}>
+        <CardIcon>{icon}</CardIcon>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription id={`desc-${title}`} isExpanded={isExpanded}>
+          {truncatedDescription}
         </CardDescription>
-        <ViewMoreLink cardBgColor={cardBgColor}>
-          View More <IoIosArrowForward />
-        </ViewMoreLink>
+        {renderViewMore()}
       </CardWrapper>
     </StyledCardContainer>
   );
