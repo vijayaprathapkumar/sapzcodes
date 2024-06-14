@@ -14,8 +14,12 @@ import {
   NavLink,
 } from "./Header.styled";
 import { useEffect, useState } from "react";
+import { usePathname } from 'next/navigation'
 
 const HeaderComponent = () => {
+  const pathName =  usePathname();
+  const hasBgColor = pathName === '/' || pathName === '/careers' ? false : true;
+  console.log(pathName,'pathName');
   const [isMobile, setMobile] = useState(false);
   const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const toggleBar = () => {
@@ -52,7 +56,7 @@ const HeaderComponent = () => {
   }, []);
 
   return (
-    <HeaderWraper scrollDirection={scrollDirection}>
+    <HeaderWraper scrollDirection={scrollDirection} hasBgColor={hasBgColor}>
       <LogoSection>
         <LogoImage src="images/sapzcodes.png" alt="Sapzcodes" />
       </LogoSection>

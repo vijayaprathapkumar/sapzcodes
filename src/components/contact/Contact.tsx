@@ -38,17 +38,17 @@ const ContactComponent = () => {
                 alt="Envelope-Img"
                 className="envelope"
               />
-              <p>contact@homelun.com</p>
+              <p>contact@sapzcodes.com</p>
             </a>
           </div>
           <div className="part-sec">
             <a href="tel:+1234567890">
               <img src="/images/Phone.png" alt="Phone-Img" className="phone" />
-              <p>+1 234 567 890</p>
+              <p>+91 9500272842</p>
             </a>
             <a href="https://wa.me/1234567890">
               <PiWhatsappLogoThin className="whatsapp-icon" />
-              <p>+1 234 567 890</p>
+              <p>+91 9500272842</p>
             </a>
           </div>
         </ContactSection>

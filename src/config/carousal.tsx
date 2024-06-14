@@ -7,15 +7,14 @@ export const ServicecarouselTitle = {
   description:
     "SAPZCODES stands as epitome of innovation in management and technology consulting. As industry pioneers, we offer a dynamic suite of systems integration and consulting services that elevate your operations to a new heights of efficiency and profitability.",
 };
-export const ServiceCareer = [
-  {
-    headerTitle: "Lets have a Walk",
-    title: "Opportunities That We Provide You",
-    subTitle:
-      "SAPZCODES is an innovative management and technology consulting firm. We provide our Clients a comprehensive suite of systems integration",
-  },
-];
-export const ServicesItems = [
+export const CareerTitle = {
+  title: "Lets have a Walk",
+  subTitle: "Opportunities That We Provide You",
+  description:
+    "SAPZCODES is an innovative management and technology consulting firm. We provide our Clients a comprehensive suite of systems integration",
+};
+
+export const ServicesCarouselItems = [
   {
     title: "Your Partner for Excellence PCOE Certified",
     icon: <img src="images/Suitcase.png" alt="Suitcase" />,

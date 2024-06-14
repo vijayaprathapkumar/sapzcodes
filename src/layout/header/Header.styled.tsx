@@ -6,6 +6,7 @@ import { styled } from "styled-components";
 interface CustomProps {
   isMobile?: boolean;
   scrollDirection?: "up" | "down";
+  hasBgColor?: boolean;
 }
 export const HeaderWraper = styled.div<CustomProps>`
   display: flex;
@@ -27,9 +28,9 @@ export const HeaderWraper = styled.div<CustomProps>`
   ${breakpoints.xs} {
     padding: 0;
     height: 24px;
-    background-color: rgba(0, 0, 0, 0.28);
-  
+    background-color: ${({ hasBgColor }) => (hasBgColor ? theme.colors.black : "rgba(0, 0, 0, 0.28)")};
   }
+
   ${breakpoints.md} {
     display: flex;
     width: 100%;

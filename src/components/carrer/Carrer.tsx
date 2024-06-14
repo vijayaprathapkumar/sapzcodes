@@ -1,20 +1,21 @@
 "use client";
-import { careerSec} from "@/config/body";
+import { careerSec } from "@/config/body";
 import BannerComponent from "../banner/Banner";
 import DetailComponent from "../details/Details";
-import { ServiceCareer, ServicesItemsCarrer } from "@/config/carousal";
+import { CareerTitle, ServicesItemsCarrer } from "@/config/carousal";
 import { BannerCarrer } from "@/config/banner";
-import ServiceComponent from "../serviceComponent/serviceCarousel";
-
-
+import CarouselwithBannerComponent from "../carouselwithBanner/CarouselwithBanner";
 
 const CareerComponents = () => {
- 
-    return(
-        <><BannerComponent bannerMain={BannerCarrer}/>
-         <ServiceComponent />
-        <DetailComponent detail={careerSec} />
-        </>
-    );
+  return (
+    <>
+      <BannerComponent bannerMain={BannerCarrer} />
+      <CarouselwithBannerComponent
+        bannerTitle={CareerTitle}
+        carouselItemData={ServicesItemsCarrer}
+      />
+      <DetailComponent detail={careerSec} />
+    </>
+  );
 };
 export default CareerComponents;

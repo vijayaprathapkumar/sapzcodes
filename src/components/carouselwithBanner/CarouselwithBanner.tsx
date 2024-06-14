@@ -4,8 +4,7 @@ import CustomSlide from "@/ui-component/carousel/Carousel";
 import ArrowButtonCustom from "@/ui-component/arrow/Arrow";
 import { theme } from "@/themes/theme";
 
-import { ArrowButtonsContainer, Wrapper } from "./ServiceCarousel.styled";
-import { ServicecarouselTitle, ServicesItems } from "@/config/carousal";
+import { ArrowButtonsContainer, Wrapper } from "./CarouselwithBanner.styled";
 import MediumCard from "@/ui-component/card/Card";
 import CustomTitle from "@/ui-component/title/Title";
 
@@ -19,8 +18,21 @@ interface ServiceItem {
   description: string;
 }
 
-const ServiceComponent = () => {
-  const ServiceSettings = {
+type BannerTitleProps = {
+  title:string;
+  subTitle:string;
+  description:string;
+}
+
+type CarouselWithBannerProps = {
+  bannerTitle : BannerTitleProps;
+  carouselItemData :ServiceItem[]
+}
+
+const CarouselwithBannerComponent = (props:CarouselWithBannerProps) => {
+  const {bannerTitle,carouselItemData} = props;
+
+  const CarouselwithBannerSettings = {
     slidesToShow: 4,
     slidesToScroll: 4,
     responsive: [
@@ -83,7 +95,7 @@ const ServiceComponent = () => {
   };
 
   const ServiceItems = () => {
-    return ServicesItems.map((item: ServiceItem, index: number) => {
+    return carouselItemData?.map((item: ServiceItem, index: number) => {
       return (
         <React.Fragment key={index}>
           <MediumCard cardItems={item} />
@@ -94,13 +106,13 @@ const ServiceComponent = () => {
 
   return (
     <Wrapper className="layout-gap">
-      <CustomTitle {...ServicecarouselTitle} alignMent="start" />
+      <CustomTitle {...bannerTitle} alignMent="start" />
       {ArrowButtons()}
-      <CustomSlide settings={ServiceSettings} ref={sliderRef}>
+      <CustomSlide settings={CarouselwithBannerSettings} ref={sliderRef}>
         {ServiceItems()}
       </CustomSlide>
     </Wrapper>
   );
 };
 
-export default ServiceComponent;
+export default CarouselwithBannerComponent;

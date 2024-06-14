@@ -3,24 +3,26 @@
 import BannerComponent from "@/components/banner/Banner";
 import DetailComponent from "@/components/details/Details";
 import EnvironmentComponent from "@/components/enviormentPage/EnvironmentPage";
-import { detailsAbout ,detailCapabilitiy,detailsCareer } from '@/config/body';
+import { detailsAbout, detailCapabilitiy, detailsCareer } from "@/config/body";
 import ContactComponent from "@/components/contact/Contact";
-import {  ServicesItems } from "@/config/carousal";
 import { BannerDash } from "@/config/banner";
-import ServiceComponent from "@/components/serviceComponent/serviceCarousel";
+import CarouselwithBannerComponent from "@/components/carouselwithBanner/CarouselwithBanner";
+import { ServicecarouselTitle, ServicesCarouselItems } from "@/config/carousal";
 
 export default function Home() {
   return (
     <>
-      <BannerComponent bannerMain={BannerDash}/>
-      <ServiceComponent />
+      <BannerComponent bannerMain={BannerDash} />
+      <CarouselwithBannerComponent
+        bannerTitle={ServicecarouselTitle}
+        carouselItemData={ServicesCarouselItems}
+      />
       <DetailComponent detail={detailsAbout} />
       <DetailComponent detail={detailCapabilitiy} />
       {/* <CustomerReviewComponent/> */}
-      <EnvironmentComponent/>
+      <EnvironmentComponent />
       <DetailComponent detail={detailsCareer} />
-      <ContactComponent/>
+      <ContactComponent />
     </>
   );
 }
-  
