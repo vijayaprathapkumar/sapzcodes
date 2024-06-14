@@ -1,15 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 import CustomSlide, {
-  CustomerReviewSettings,
-} from "@/custom-component/carousel/Carousel";
+} from "@/ui-component/carousel/Carousel";
 import React from "react";
 import {
   AuthorImage,
   AuthorName,
   AuthorTitle,
   AuthorWarrper,
-  ContentWarrper,
   Header,
+  LeftArrowButton,
+  RightArrowButton,
   SildeContainer,
   TestimonialAuthor,
   TestimonialCard,
@@ -27,6 +27,13 @@ interface TestimonialProps {
 }
 
 const CustomerReviewComponent = () => {
+   const CustomerReviewSettings = {
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    nextArrow: <RightArrowButton />,
+    prevArrow: <LeftArrowButton />,
+  };
+
   const Testimonial = ({ text, author, title, imageSrc }: TestimonialProps) => (
     <TestimonialCard>
       <TestimonialText>{text}</TestimonialText>

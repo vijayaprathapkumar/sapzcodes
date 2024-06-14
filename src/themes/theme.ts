@@ -1,5 +1,6 @@
 export interface Theme {
   colors: {
+    black: string;
     white: string;
     primary: string;
     secondary: string;
@@ -35,6 +36,7 @@ export const theme: Theme = {
     navy: "#11142D",
     dark: "#212121",
     white: "#fff",
+    black: "#000",
     lightnav: "#e4e4e4",
     lightgreen: "#F0F7EC",
     lightgrey:"#9A9AB0",

@@ -3,34 +3,39 @@ import {
   ArrowImage,
   BackgroundGradient,
   ButtonBox,
+  ContentWrapper,
   MainContent,
   SectionWrapper,
   SubContent,
 } from "./Banner.styled";
 
-const BannerComponent = () => {
+interface BannerMain {
+  image: string;
+  title: string;
+  subTitle: string;
+  button: string;
+  marginTop: string;
+  width: string;
+}
+const BannerComponent = ({ bannerMain }: { bannerMain: BannerMain[] }) => {
+  const { title, subTitle, button, image, marginTop, width } = bannerMain[0];
   return (
-      <><SectionWrapper>
-      <div className="set">
-        <div>
-          <BackgroundGradient />
-        </div>
-        <img
-          src="images/banner.png"
-          alt="banner"
-          className="banner-image" />
-      </div>
-    </SectionWrapper><MainContent>
-        Propel our business and achieve new height with Sapcodes transformative solutions.
-      </MainContent><SubContent>
-        Streamline processes, gain insights, and make data-driven decisions with VMA Tech Labs. Our tailored technology propels success for businesses of all sizes. Embrace the future of business management, unlock growth opportunities, and thrive with us today.
-      </SubContent><ButtonBox>
-        <button className="get-btn">
-          Get A Quote
-          <ArrowImage src="images/button-Arrow.png" alt="arrow" />
-        </button>
-      </ButtonBox></>
-
+    <>
+      <SectionWrapper>
+        <BackgroundGradient />
+        <img src={image} alt="banner" className="banner-image" />
+        <ContentWrapper  className="layout-gap">
+          <MainContent marginTop={marginTop} width={width}>
+            {title}
+          </MainContent>
+          <SubContent>{subTitle}</SubContent>
+          <ButtonBox>
+              {button}
+              <ArrowImage src="images/button-Arrow.png" alt="arrow" />
+          </ButtonBox>
+        </ContentWrapper>
+      </SectionWrapper>
+    </>
   );
 };
 

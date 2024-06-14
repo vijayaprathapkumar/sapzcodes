@@ -6,18 +6,19 @@ import { styled } from "styled-components";
 interface CustomProps {
   isMobile?: boolean;
   scrollDirection?: "up" | "down";
+  hasBgColor?: boolean;
 }
 export const HeaderWraper = styled.div<CustomProps>`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 2rem;
   color: ${theme.colors.white};
   z-index: 50;
   width: 100%;
   height: 65px;
   position: fixed;
   top: 0;
+  left:0;
   transition: 0.3s;
 
   ${({ scrollDirection }) => scrollDirection === "down" && `
@@ -27,9 +28,9 @@ export const HeaderWraper = styled.div<CustomProps>`
   ${breakpoints.xs} {
     padding: 0;
     height: 24px;
-    background-color: rgba(0, 0, 0, 0.28);
-  
+    background-color: ${({ hasBgColor }) => (hasBgColor ? theme.colors.black : "rgba(0, 0, 0, 0.28)")};
   }
+
   ${breakpoints.md} {
     display: flex;
     width: 100%;
@@ -49,15 +50,16 @@ export const NavLink = styled.div`
     left: 0;
   }
   ${breakpoints.md} {
-    left: 20%;
+    left: 0%;
   }
   ${breakpoints.lg} { 
-    left: 34%;
+    left: 13%;
   }
   ${breakpoints.xl} { 
-    left: 48%;
+    left: 34%;
   }
 `;
+
 export const Link = styled.a`
 color: ${theme.colors.white};
   text-decoration: none;

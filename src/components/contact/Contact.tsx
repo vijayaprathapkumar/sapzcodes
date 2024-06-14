@@ -1,9 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-import { AddressContent, ContactSection, ContactWrapper, ImageSection,LocationSection } from "./Contact.styled";
+import { PiWhatsappLogoThin } from "react-icons/pi";
+import {
+  AddressContent,
+  ContactSection,
+  ContactWrapper,
+  ImageSection,
+  LocationSection,
+} from "./Contact.styled";
 
 const ContactComponent = () => {
   return (
-    <ContactWrapper>
+    <ContactWrapper className="layout-gap">
       <AddressContent>
         <h5 className="conct">CONTACT US</h5>
         <h2 className="get-cont">Get in touch with us.</h2>
@@ -15,24 +22,43 @@ const ContactComponent = () => {
         <LocationSection>
           <h3>Find us at</h3>
           <div className="part-one">
-          <img src="/images/MapPin.png" alt="MapPin-Img" className="map"/>
-          <p>
-            3rd Floor, 311 - Sanganoor main road. Ganapathy, Coimbatore - 641006
-          </p>
+            <img src="/images/MapPin.png" alt="MapPin-Img" className="map" />
+            <p>
+              3rd Floor, 311 - Sanganoor main road. Ganapathy, Coimbatore -
+              641006
+            </p>
           </div>
         </LocationSection>
         <ContactSection>
           <h3>Reach out to us at</h3>
+          <div className="envelope-part">
+            <a href="mailto:contact@homelun.com">
+              <img
+                src="/images/Envelope.png"
+                alt="Envelope-Img"
+                className="envelope"
+              />
+              <p>contact@sapzcodes.com</p>
+            </a>
+          </div>
           <div className="part-sec">
-          <img src="/images/Envelope.png" alt="Envelope-Img" className="envelope"/>
-          <p>contact@homelun.</p>
-          <img src="/images/Phone.png" alt="Phone-Img" className="phone"/>
-          <p>+1 234 567 890</p>
+            <a href="tel:+1234567890">
+              <img src="/images/Phone.png" alt="Phone-Img" className="phone" />
+              <p>+91 9500272842</p>
+            </a>
+            <a href="https://wa.me/1234567890">
+              <PiWhatsappLogoThin className="whatsapp-icon" />
+              <p>+91 9500272842</p>
+            </a>
           </div>
         </ContactSection>
       </AddressContent>
       <ImageSection>
-       <img src="/images/contact.png" alt="Conatct-image" className="contact-image"/>
+        <img
+          src="/images/contact.png"
+          alt="Conatct-image"
+          className="contact-image"
+        />
       </ImageSection>
     </ContactWrapper>
   );

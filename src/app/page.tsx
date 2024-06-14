@@ -1,27 +1,28 @@
 "use client";
+
 import BannerComponent from "@/components/banner/Banner";
 import DetailComponent from "@/components/details/Details";
-import HeaderComponent from "@/layout/header/Header";
-import ServiceComponent from "@/components/service/ServicePage";
 import EnvironmentComponent from "@/components/enviormentPage/EnvironmentPage";
-import CustomerReviewComponent from "@/components/customerReview/CustomerReview";
-import { detailsAbout ,detailCapabilitiy,detailsCareer } from '@/config/body';
-import FooterComponent from "@/layout/footer/Footer";
+import { detailsAbout, detailCapabilitiy, detailsCareer } from "@/config/body";
 import ContactComponent from "@/components/contact/Contact";
+import { BannerDash } from "@/config/banner";
+import CarouselwithBannerComponent from "@/components/carouselwithBanner/CarouselwithBanner";
+import { ServicecarouselTitle, ServicesCarouselItems } from "@/config/carousal";
 
 export default function Home() {
   return (
     <>
-      <HeaderComponent />
-      <BannerComponent />
-      <ServiceComponent/>
+      <BannerComponent bannerMain={BannerDash} />
+      <CarouselwithBannerComponent
+        bannerTitle={ServicecarouselTitle}
+        carouselItemData={ServicesCarouselItems}
+      />
       <DetailComponent detail={detailsAbout} />
       <DetailComponent detail={detailCapabilitiy} />
-      <CustomerReviewComponent/>
-      <EnvironmentComponent/>
+      {/* <CustomerReviewComponent/> */}
+      <EnvironmentComponent />
       <DetailComponent detail={detailsCareer} />
-      <ContactComponent/>
-      <FooterComponent />
+      <ContactComponent />
     </>
   );
 }
