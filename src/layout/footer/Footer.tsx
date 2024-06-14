@@ -1,21 +1,21 @@
 "use client";
 import React from "react";
-import { FooterDetails } from "@/config/footer";
+import { FooterDetails, Footericons } from "@/config/footer";
 import {
   Bootomwrapper,
-  FacebookIcon,
-  Footereraper,
-  GoogleIcon,
-  InstaIcon,
-  LinkedInIcon,
+  Footerwrapper,
+  Iconwrapper,
+  LinkStyled,
   Maindiv,
-  TwitterIcon,
 } from "./Footer.styled";
+import Link from "next/link";
 
 const FooterComponent = () => {
+  const currentyear = new Date().getFullYear();
+
   return (
     <div className="layout-gap">
-      <Footereraper>
+      <Footerwrapper>
         {FooterDetails.map((item) => {
           const {
             image,
@@ -42,17 +42,15 @@ const FooterComponent = () => {
             </Maindiv>
           );
         })}
-      </Footereraper>
+      </Footerwrapper>
       <hr />
       <Bootomwrapper>
-        <p>Copyright © 2024 Sapzcodes. All Rights Reserved.</p>
-        <div>
-          <FacebookIcon />
-          <GoogleIcon />
-          <InstaIcon />
-          <TwitterIcon />
-          <LinkedInIcon />
-        </div>
+        <p>Copyright © {currentyear} Sapzcodes. All Rights Reserved.</p>
+        <Iconwrapper>
+          {Footericons.map((item, index) => (
+            <LinkStyled key={index} href={item.href}> {item.icon} </LinkStyled>
+          ))}
+        </Iconwrapper>
       </Bootomwrapper>
     </div>
   );
