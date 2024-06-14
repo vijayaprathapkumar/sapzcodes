@@ -39,10 +39,10 @@ export const MainWrapper = styled.div<{
     ${breakpoints.xs} {
         flex-direction:column;
         .image{
-            margin-top:870px; 
+            margin-top:700px; 
         }
         .dots{
-            margin-top:-70px;
+            margin-top:-50px;
             right:10px;
         } 
         .dark{
@@ -88,7 +88,7 @@ export const MainWrapper = styled.div<{
     ${breakpoints.lg} {
         flex-direction:row;
         .image{
-            top:750px; 
+            top:880px; 
         }
         .dark{
             margin-top:360px;
@@ -101,7 +101,7 @@ export const MainWrapper = styled.div<{
     }
     ${breakpoints.xl} {
         .image{
-            top:800px; 
+            top:960px; 
         }     
     }
 `;
@@ -130,9 +130,9 @@ export const DetailWrapper = styled.div<{
     }
     ${breakpoints.xs} {
         order: 1;
-        margin-left: 10px;
+        margin-left: 50px;
         margin-right: 0px;
-        margin-top: 30px;
+        margin-top: 60px;
         margin-bottom:-10px;
         width:270px;
         img {
@@ -144,7 +144,7 @@ export const DetailWrapper = styled.div<{
         order: 1;
         margin-left: ${({ imageAlignment }) => (imageAlignment === "right" ? '50%' : "10px")};
         margin-right: 0px;
-        margin-top: 30px;
+        margin-top: 50px;
         margin-bottom:-20px;
         width:370px;
         img {
@@ -201,9 +201,15 @@ export const AboutDiv = styled.div`
     }
     ${breakpoints.xs} {
         order: 2;
-        margin-right: 0px;
-        margin-left: 0px;
-        margin-top:70px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top:30px;
+        h2{
+          font-size:20px;
+        }
+        button{
+           margin-bottom:10px;
+        }
     }
     ${breakpoints.lg} {
         margin-right: 100px;
@@ -233,3 +239,4 @@ export const AboutDiv = styled.div`
         }
     }
 `;
+
