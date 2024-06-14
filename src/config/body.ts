@@ -9,7 +9,7 @@ export const detailsAbout = {
     width: "470px",
     title: "ABOUT US",
     subTitle: "At SAPZCODES, our collective vision resolve around unlocking the genuine power and usage of technology.With our expertise,we are committed to converting ideas into groundbreaking solutions.",
-    // description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci odit, in inventore obcaecati, vitae id provident, nihil vero voluptas eius eveniet veritatis reprehenderit rerum. Dicta reiciendis maiores quos explicabo nisi!",
+    description: "",
     button: {
         text: 'Know more',
     },
