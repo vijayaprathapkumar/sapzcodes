@@ -11,8 +11,9 @@ import {
   Maindiv,
   TwitterIcon,
 } from "./Footer.styled";
+import Link from "next/link";
 
-const FooterComponent = () => {
+const FooterComponent = ({ scrollToSection }: any) => {
   return (
     <div className="layout-gap">
       <Footereraper>
@@ -33,11 +34,23 @@ const FooterComponent = () => {
               <h4>{title}</h4>
               {description && <p>{description}</p>}
               <ul>
-                {subApp && <li>{subApp}</li>}
-                {subWeb && <li>{subWeb}</li>}
-                {subErp && <li>{subErp}</li>}
-                {subout && <li>{subout}</li>}
-                {subuse && <li>{subuse}</li>}
+                {subApp && (
+                  <li onClick={() => scrollToSection(subApp)}>{subApp}</li>
+                )}
+                {subWeb && (
+                  <li>
+                    <Link href={'/careers'}>{subWeb}</Link>
+                  </li>
+                )}
+                {subErp && (
+                  <li onClick={() => scrollToSection(subErp)}>{subErp}</li>
+                )}
+                {subout && (
+                  <li onClick={() => scrollToSection(subout)}>{subout}</li>
+                )}
+                {subuse && (
+                  <li onClick={() => scrollToSection(subuse)}>{subuse}</li>
+                )}
               </ul>
             </Maindiv>
           );

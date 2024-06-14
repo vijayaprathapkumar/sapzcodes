@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { AboutDiv, DetailWrapper, MainWrapper } from "./Details.styled";
+import Link from "next/link";
 
 interface Detail {
   image: string;
@@ -51,13 +52,15 @@ const DetailComponent = ({ detail }: { detail: Detail }) => {
         <h2>{subTitle}</h2>
         <p>{description}</p>
         <button>
-          {button.text}{" "}
-          <img
-            src="/images/Button_Arrow.png"
-            alt="Arrow"
-            width={27}
-            height={13}
-          />
+          <Link href={"/careers"}>
+            {button.text}
+            <img
+              src="/images/Button_Arrow.png"
+              alt="Arrow"
+              width={27}
+              height={13}
+            />
+          </Link>
         </button>
       </AboutDiv>
       <DetailWrapper

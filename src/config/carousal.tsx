@@ -20,53 +20,33 @@ export const CareerTitle = {
 export const ServicesItemsCarrer = [
   {
     title: "SAP Core ABAP Consulting",
-    icon: <img src="images/Suitcase.png" alt="Suitcase" />,
+    icon: <PiSuitcaseSimpleBold />,
     description:
       "Tailored consulting services focusing on SAP Core ABAP to optimize business processes and enhance system functionality.",
-    bgColor: theme.colors.white,
-    cardBgColor: theme.colors.green,
-    titleColor: theme.colors.white,
-    descriptionColor: theme.colors.white,
   },
   {
     title: "ABAP on HANA Consulting",
-    icon: <img src="images/MoneyCoinDollar.png" alt="No MoneyCoinDollar" />,
+    icon: <BiDollarCircle />,
     description:
       "Specialized consulting expertise in ABAP on HANA, enabling businesses to leverage the power of in-memory computing for enhanced performance.",
-    bgColor: theme.colors.dark,
-    cardBgColor: theme.colors.white,
-    titleColor: theme.colors.navy,
-    descriptionColor: theme.colors.lightgrey,
   },
   {
     title: "SAP UI5 and FIORI Consulting",
-    icon: <img src="images/LightBulb.png" alt="No LightBulb" />,
+    icon: <HiOutlineLightBulb />,
     description:
       "Consulting services dedicated to SAP UI5 and FIORI, empowering businesses with intuitive user interfaces and seamless user experiences.",
-    bgColor: theme.colors.dark,
-    cardBgColor: theme.colors.white,
-    titleColor: theme.colors.navy,
-    descriptionColor: theme.colors.lightgrey,
   },
   {
     title: "OData and Rest API Integration",
-    icon: <img src="images/UserProfile.png" alt="No UserProfile" />,
+    icon: <BiUserCircle />,
     description:
       "Proficient integration services for OData and Rest APIs, facilitating seamless data exchange and connectivity across systems.",
-    bgColor: theme.colors.dark,
-    cardBgColor: theme.colors.white,
-    titleColor: theme.colors.navy,
-    descriptionColor: theme.colors.lightgrey,
   },
   {
     title: "SAP BTP on ABAP Components Consulting",
-    icon: <img src="images/UserProfile.png" alt="No UserProfile" />,
+    icon: <BiUserCircle />,
     description:
       "Consulting assistance for SAP Business Technology Platform on ABAP Components, enhancing the scalability and flexibility of business solutions.",
-    bgColor: theme.colors.dark,
-    cardBgColor: theme.colors.white,
-    titleColor: theme.colors.navy,
-    descriptionColor: theme.colors.lightgrey,
   },
 ];
 export const CustomItems = [
