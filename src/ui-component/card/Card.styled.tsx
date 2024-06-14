@@ -71,6 +71,7 @@ export const ButtonStyled = styled.button`
   border: none;
 `;
 export const CardWrapper = styled.div<{ isExpanded: boolean }>`
+  margin-top: 10px;
   background-color: ${theme.colors.white};
   padding: 30px;
   display: flex;

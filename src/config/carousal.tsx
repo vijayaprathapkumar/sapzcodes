@@ -8,7 +8,7 @@ export const ServicecarouselTitle = {
   title: "Our Services",
   subTitle: "Experience Excellence: Delve into Our Range of Services",
   description:
-    "SAPZCODES stands as epitome of innovation in management and technology consulting. As industry pioneers, we offer a dynamic suite of systems integration and consulting services that elevate your operations to a new heights of efficiency and profitability.",
+    "<strong>SAPZCODES</strong> stands as epitome of innovation in management and technology consulting. As industry pioneers, we offer a dynamic suite of systems integration and consulting services that elevate your operations to a new heights of efficiency and profitability.",
 };
 export const CareerTitle = {
   title: "Lets have a Walk",
