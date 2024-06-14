@@ -1,5 +1,6 @@
 import breakpoints from "@/themes/breakpoints";
 import { theme } from "@/themes/theme";
+import Link from "next/link";
 import { FiMenu } from "react-icons/fi";
 import { styled } from "styled-components";
 
@@ -60,7 +61,7 @@ export const NavLink = styled.div`
   }
 `;
 
-export const Link = styled.a`
+export const LinkStyled = styled(Link)<{ href: string }>`
 color: ${theme.colors.white};
   text-decoration: none;
   position: relative;

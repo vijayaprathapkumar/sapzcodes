@@ -7,15 +7,15 @@ import { detailsAbout, detailCapabilitiy, detailsCareer } from "@/config/body";
 import ContactComponent from "@/components/contact/Contact";
 import { BannerDash } from "@/config/banner";
 import CarouselwithBannerComponent from "@/components/carouselwithBanner/CarouselwithBanner";
-import { ServicecarouselTitle, ServicesCarouselItems } from "@/config/carousal";
+import { ServicecarouselTitle, ServicesItemsAll } from "@/config/carousal";
 
-export default function Home() {
+export default function Home() {;
   return (
     <>
       <BannerComponent bannerMain={BannerDash} />
       <CarouselwithBannerComponent
         bannerTitle={ServicecarouselTitle}
-        carouselItemData={ServicesCarouselItems}
+        carouselItemData={ServicesItemsAll}
       />
       <DetailComponent detail={detailsAbout} />
       <DetailComponent detail={detailCapabilitiy} />

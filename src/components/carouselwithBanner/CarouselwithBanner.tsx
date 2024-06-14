@@ -7,34 +7,32 @@ import { theme } from "@/themes/theme";
 import { ArrowButtonsContainer, Wrapper } from "./CarouselwithBanner.styled";
 import MediumCard from "@/ui-component/card/Card";
 import CustomTitle from "@/ui-component/title/Title";
+import { IoIosArrowForward } from "react-icons/io";
 
 interface ServiceItem {
-  cardBgColor: string;
-  bgColor: string;
   icon: JSX.Element;
   title: string;
-  titleColor: string;
-  descriptionColor: string;
   description: string;
 }
 
 type BannerTitleProps = {
-  title:string;
-  subTitle:string;
-  description:string;
-}
+  title: string;
+  subTitle: string;
+  description: string;
+};
 
 type CarouselWithBannerProps = {
-  bannerTitle : BannerTitleProps;
-  carouselItemData :ServiceItem[]
-}
+  bannerTitle: BannerTitleProps;
+  carouselItemData: ServiceItem[];
+};
 
-const CarouselwithBannerComponent = (props:CarouselWithBannerProps) => {
-  const {bannerTitle,carouselItemData} = props;
+const CarouselwithBannerComponent = (props: CarouselWithBannerProps) => {
+  const { bannerTitle, carouselItemData } = props;
 
   const CarouselwithBannerSettings = {
     slidesToShow: 4,
     slidesToScroll: 4,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1440,
@@ -95,10 +93,20 @@ const CarouselwithBannerComponent = (props:CarouselWithBannerProps) => {
   };
 
   const ServiceItems = () => {
+    const viewMore = {
+      text: "View More",
+      textIcon: <IoIosArrowForward />,
+      href: '/service'
+    }
+    
     return carouselItemData?.map((item: ServiceItem, index: number) => {
+      const cardProps = {
+        ...item,
+        viewMore,
+      };
       return (
         <React.Fragment key={index}>
-          <MediumCard cardItems={item} />
+          <MediumCard cardItems={cardProps} />
         </React.Fragment>
       );
     });

@@ -5,8 +5,8 @@ import {
   Contact,
   DropdownMenu,
   HeaderWraper,
-  Link,
   LinkContainer,
+  LinkStyled,
   LogoImage,
   LogoSection,
   MenuIcon,
@@ -15,6 +15,12 @@ import {
 } from "./Header.styled";
 import { useEffect, useState } from "react";
 import { usePathname } from 'next/navigation'
+
+type Menu = {
+  path: string;
+  name: string;
+};
+
 
 const HeaderComponent = () => {
   const pathName =  usePathname();
@@ -30,7 +36,7 @@ const HeaderComponent = () => {
     return Menus?.map((menu, index) => {
       return (
         <NavLink key={index}>
-          <Link href={menu.path}>{menu.name}</Link>
+          <LinkStyled href={menu.path}>{menu.name}</LinkStyled>
         </NavLink>
       );
     });

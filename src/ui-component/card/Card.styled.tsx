@@ -1,70 +1,54 @@
 import breakpoints from "@/themes/breakpoints";
 import { theme } from "@/themes/theme";
+import Link from "next/link";
 import { styled } from "styled-components";
 
 export const StyledCardContainer = styled.div`
   border-radius: 1rem;
+  height: 430px;
 `;
 
-export const CardWrapper = styled.div<{ cardBgColor?: string }>`
-  background-color: ${(props) => props.cardBgColor || theme.colors.white};
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  gap:15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 0.5px solid ${theme.colors.lightnav};
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
-export const CardIcon = styled.div<{ bgColor?: string }>`
+export const CardIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 41px;
+  height: 42px;
   border-radius: 50%;
-  background-color: ${(props) => props.bgColor || theme.colors.white};
+  background-color: ${theme.colors.dark};
   color: ${theme.colors.white};
-  font-size: 20px;
+  font-size: 28px;
   margin-bottom: 10px;
 `;
 
-export const CardTitle = styled.h3<{ textColor?: string }>`
+export const CardTitle = styled.h3`
   font-size: 19px;
   font-weight: 600;
   line-height: 28.8px;
   letter-spacing: calc(0.18 * 0.5 / 100);
-  color: ${(props) => props.textColor || theme.colors.dark};
+  color: ${theme.colors.navy};
 `;
 
-export const CardDescription = styled.p<{ textColor?: string }>`
+export const CardDescription = styled.p<{ isExpanded: boolean }>`
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
-  min-height: 140px;
-  max-height: 140px;
-  width: 100%;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 7;
+  -webkit-line-clamp: ${({ isExpanded }) => (isExpanded ? "none" : 7)};
   -webkit-box-orient: vertical;
-  transition: all 0.5s ease-in-out;
-  color: ${(props) => props.textColor || theme.colors.lightgrey};
+  max-height: ${({ isExpanded }) => (isExpanded ? "none" : "154px")};
+  color: ${theme.colors.lightgrey};
   ${breakpoints.lg} {
     font-size: 17px;
   }
   ${breakpoints.xl} {
     font-size: 15px;
-    color: ${(props) => props.textColor || theme.colors.lightgrey};
+    color: ${theme.colors.lightgrey};
   }
 `;
 
-export const ViewMoreLink = styled.a<{ cardBgColor?: string }>`
+export const ViewMoreLink = styled(Link)`
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -72,8 +56,52 @@ export const ViewMoreLink = styled.a<{ cardBgColor?: string }>`
   text-decoration: underline;
   display: flex;
   align-items: center;
-  color: ${(props) =>
-    props.cardBgColor === theme.colors.green
-      ? theme.colors.white
-      : theme.colors.grey};
+  color: ${theme.colors.grey};
+`;
+
+export const ButtonStyled = styled.button`
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  color: ${theme.colors.grey};
+  border: none;
+`;
+export const CardWrapper = styled.div<{ isExpanded: boolean }>`
+  margin-top: 10px;
+  background-color: ${theme.colors.white};
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 0.5px solid ${theme.colors.lightnav};
+  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  cursor: pointer;
+  height: ${({ isExpanded }) => (isExpanded ? "auto" : "370px")};
+  &:hover {
+    transform: scale(1.05);
+    background-color: ${theme.colors.green};
+  }
+  &:hover ${CardTitle} {
+    color: ${theme.colors.white};
+  }
+  &:hover ${CardDescription} {
+    color: ${theme.colors.white};
+  }
+  &:hover ${ViewMoreLink} {
+    color: ${theme.colors.white};
+  }
+
+  &:hover ${CardIcon} {
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.dark};
+  }
+  &:hover ${ButtonStyled} {
+    text-decoration: underline;
+    color: ${theme.colors.white};
+  }
 `;
