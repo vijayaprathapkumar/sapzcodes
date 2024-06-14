@@ -3,7 +3,7 @@ export const FooterDetails = [
     {
         image: "/images/codeslogo.png",
         title: "About",
-        description: "Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet."
+        description: "At SAPZCODES, our collective vision resolve around unlocking the genuine power and usage of technology.With our expertise,we are committed to converting ideas into groundbreaking solutions."
     },
     {
         title: "Our Services",
