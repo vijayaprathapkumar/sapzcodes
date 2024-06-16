@@ -1,21 +1,32 @@
 "use client";
-import { careerSec } from "@/config/body";
-import BannerComponent from "../banner/Banner";
-import DetailComponent from "../details/Details";
-import { CareerTitle, ServicesItemsCarrer } from "@/config/carousal";
+import { ServicesItemsCarrer, CareerTitle } from "@/config/carousal";
 import { BannerCarrer } from "@/config/banner";
-import CarouselwithBannerComponent from "../carouselwithBanner/CarouselwithBanner";
+import BannerComponent from "../banner/Banner";
+import { CardWrapper, Card } from "./Carrer.styled";
+import CustomTitle from "@/ui-component/title/Title";
 
 const CareerComponents = () => {
   return (
     <>
       <BannerComponent bannerMain={BannerCarrer} />
-      <CarouselwithBannerComponent
-        bannerTitle={CareerTitle}
-        carouselItemData={ServicesItemsCarrer}
-      />
-      {/* <DetailComponent detail={careerSec} /> */}
+      <div className="layout-gap">
+        <CustomTitle {...CareerTitle} alignMent="start" />
+
+        <CardWrapper>
+          {ServicesItemsCarrer.map(
+            ({ title, jobLocation, NoOfPosition, Experience }, index) => (
+              <Card key={index}>
+                <h3>{title}</h3>
+                <p>{jobLocation}</p>
+                <p>{NoOfPosition}</p>
+                <p>{Experience}</p>
+              </Card>
+            )
+          )}
+        </CardWrapper>
+      </div>
     </>
   );
 };
+
 export default CareerComponents;
