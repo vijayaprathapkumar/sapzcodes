@@ -24,8 +24,10 @@ const ContactComponent = () => {
           <div className="part-one">
             <img src="/images/MapPin.png" alt="MapPin-Img" className="map" />
             <p>
-              3rd Floor, 311 - Sanganoor main road. Ganapathy, Coimbatore -
-              641006
+            Sapzcodes Consultancy Private Limited,
+            3rd Floor, 311, Sanganoor Main Road, 
+            Ganapathy, Coimbatore, TamilNadu, 
+            641006.
             </p>
           </div>
         </LocationSection>
@@ -38,7 +40,7 @@ const ContactComponent = () => {
                 alt="Envelope-Img"
                 className="envelope"
               />
-              <p>contact@sapzcodes.com</p>
+              <p>hr@sapzcodes.com</p>
             </a>
           </div>
           <div className="part-sec">

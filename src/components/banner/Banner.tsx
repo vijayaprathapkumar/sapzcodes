@@ -29,10 +29,10 @@ const BannerComponent = ({ bannerMain }: { bannerMain: BannerMain[] }) => {
             {title}
           </MainContent>
           <SubContent>{subTitle}</SubContent>
-          <ButtonBox>
+          {/* <ButtonBox>
               {button}
               <ArrowImage src="images/button-Arrow.png" alt="arrow" />
-          </ButtonBox>
+          </ButtonBox> */}
         </ContentWrapper>
       </SectionWrapper>
     </>

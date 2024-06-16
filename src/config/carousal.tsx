@@ -14,7 +14,7 @@ export const CareerTitle = {
   title: "Lets have a Walk",
   subTitle: "Opportunities That We Provide You",
   description:
-    "SAPZCODES is an innovative management and technology consulting firm. We provide our Clients a comprehensive suite of systems integration",
+    "",
 };
 
 export const ServicesItemsCarrer = [
@@ -107,7 +107,7 @@ export const ServicesItemsAll = [
       "At SAPZCODES, we offer management consulting services aimed at helping organizations improve their overall performance and achieve sustainable growth. Our management consultants bring extensive industry experience and expertise to assist clients in areas such as organizational strategy, business process optimization, and change management. We collaborate closely with clients to develop actionable strategies and implement effective solutions that drive business success. Our holistic approach to management consulting ensures that we address key challenges and opportunities to enhance organizational performance and competitiveness.",
   },
   {
-    title: "Software Products Development",
+    title: "SAP Products Development",
     icon: <BiUserCircle />,
     description:
       "In our software products development division, we focus on creating innovative and scalable solutions that address the evolving needs of businesses across various industries. Our product development process is guided by a deep understanding of market trends, user requirements, and technological advancements. We leverage agile methodologies and robust development frameworks to deliver high-quality software products that empower our clients to achieve their business objectives. Whether it's enterprise applications, mobile apps, or custom software solutions, we are committed to excellence in software products development.",
@@ -116,11 +116,11 @@ export const ServicesItemsAll = [
     title: "Corporate Training",
     icon: <BiDollarCircle />,
     description:
-      "Our IT training services aim to equip individuals and organizations with the knowledge and skills required to succeed in today's dynamic IT landscape. We offer a wide range of training programs covering various technologies, including SAP, software development, data analytics, and more. Our training courses are delivered by industry experts and feature hands-on exercises and real-world scenarios to ensure practical learning outcomes. We are dedicated to providing comprehensive and effective IT training solutions that empower professionals to excel in their careers and organizations to stay ahead of the competition.",
+      "Our Corporate training services aim to equip individuals and organizations with the knowledge and skills required to succeed in today's dynamic IT landscape. We offer a wide range of training programs covering various technologies, including SAP, software development, data analytics, and more. Our training courses are delivered by industry experts and feature hands-on exercises and real-world scenarios to ensure practical learning outcomes. We are dedicated to providing comprehensive and effective IT training solutions that empower professionals to excel in their careers and organizations to stay ahead of the competition.",
   },
   {
     title: "Employment Staffing",
-    icon: <BiDollarCircle />,
+    icon: <BiUserCircle />,
     description:
       "As part of our commitment to supporting talent development and employment opportunities, we offer staffing services to connect skilled professionals with leading organizations. Through our extensive network and rigorous screening processes, we identify and match candidates with the right skills and expertise to meet our clients' staffing needs. Whether it's temporary staffing, permanent placements, or specialized recruitment services, we strive to facilitate successful employment partnerships that benefit both employers and job seekers. Our focus on quality, reliability, and professionalism ensures that we deliver value-driven staffing solutions that drive business success.",
   },
