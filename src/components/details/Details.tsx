@@ -21,11 +21,11 @@ interface Detail {
   imgLight?: string;
   imgDark?: string;
   button: {
-    text: string;
+    text?: string ;
   };
 }
 
-const DetailComponent = ({ detail }: { detail: Detail }) => {
+const DetailComponent = ({ detail }: { detail: any }) => {
   const {
     image,
     title,
@@ -51,17 +51,19 @@ const DetailComponent = ({ detail }: { detail: Detail }) => {
         <h4>{title}</h4>
         <h2>{subTitle}</h2>
         <p>{description}</p>
-        <button>
-          <Link href={"/careers"}>
-            {button.text}
-            <img
-              src="/images/Button_Arrow.png"
-              alt="Arrow"
-              width={27}
-              height={13}
-            />
-          </Link>
-        </button>
+        {button && (
+          <button>
+            <Link href={"/careers"}>
+              {button.text}
+              <img
+                src="/images/Button_Arrow.png"
+                alt="Arrow"
+                width={27}
+                height={13}
+              />
+            </Link>
+          </button>
+        )}
       </AboutDiv>
       <DetailWrapper
         objectFit={objectFit}

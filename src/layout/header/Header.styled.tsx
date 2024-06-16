@@ -22,12 +22,6 @@ export const HeaderWraper = styled.div<CustomProps>`
   left: 0;
   transition: 0.3s;
 
-  ${({ scrollDirection }) =>
-    scrollDirection === "down" &&
-    `
-    top: -65px;
-  `}
-
   ${breakpoints.xs} {
     padding: 0;
     height: 24px;

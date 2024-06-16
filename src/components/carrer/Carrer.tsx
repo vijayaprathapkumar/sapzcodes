@@ -14,7 +14,7 @@ const CareerComponents = () => {
         bannerTitle={CareerTitle}
         carouselItemData={ServicesItemsCarrer}
       />
-      <DetailComponent detail={careerSec} />
+      {/* <DetailComponent detail={careerSec} /> */}
     </>
   );
 };

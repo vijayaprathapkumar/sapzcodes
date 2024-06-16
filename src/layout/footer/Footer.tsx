@@ -37,7 +37,7 @@ const FooterComponent = ({ scrollToSection }: any) => {
                 )}
                 {subWeb && (
                   <li>
-                    <Link href={'/careers'}>{subWeb}</Link>
+                    <Link href={"/careers"}>{subWeb}</Link>
                   </li>
                 )}
                 {subErp && (
@@ -56,10 +56,16 @@ const FooterComponent = ({ scrollToSection }: any) => {
       </Footerwrapper>
       <hr />
       <Bootomwrapper>
-        <p>Copyright © {currentyear} Sapzcodes. All Rights Reserved.</p>
+        <p>
+          Copyright © {currentyear} SAPZCODES Consultancy Private Limited. All
+          Rights Reserved.
+        </p>
         <Iconwrapper>
           {Footericons.map((item, index) => (
-            <LinkStyled key={index} href={item.href}> {item.icon} </LinkStyled>
+            <LinkStyled key={index} href={item.href}>
+              {" "}
+              {item.icon}{" "}
+            </LinkStyled>
           ))}
         </Iconwrapper>
       </Bootomwrapper>
