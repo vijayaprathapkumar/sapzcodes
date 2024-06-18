@@ -6,6 +6,9 @@ import { styled } from "styled-components";
 export const StyledCardContainer = styled.div`
   border-radius: 1rem;
   height: 430px;
+    ${breakpoints.xs} {
+      height: 380px;
+  }
 `;
 
 export const CardIcon = styled.div`
@@ -104,4 +107,7 @@ export const CardWrapper = styled.div<{ isExpanded: boolean }>`
     text-decoration: underline;
     color: ${theme.colors.white};
   }
+    ${breakpoints.xs}{
+        margin-bottom:-40px;
+    }
 `;
