@@ -49,6 +49,7 @@ export const NavLink = styled.div`
   }
   ${breakpoints.md} {
     left: 0%;
+    
   }
   ${breakpoints.lg} {
     left: 13%;
@@ -90,7 +91,7 @@ export const LinkStyled = styled(Link)<{ href: string }>`
 `;
 export const MenuWrapper = styled.div<CustomProps>`
   gap: 3rem;
-
+  
   ${breakpoints.xs} {
     flex-direction: column;
     gap: 5px;
@@ -130,8 +131,8 @@ export const Contact = styled.div`
     cursor: pointer;
   }
   ${breakpoints.xs} {
-    bottom: 15px;
-    left: 0;
+    bottom: 20px;
+    left: 4%;
 
     .contact-btn {
       height: 20px;
@@ -222,6 +223,8 @@ export const LinkContainer = styled.div`
   ${breakpoints.md} {
     flex-direction: row;
     align-items: center;
+  
+    
   }
 `;
 export const MenuIcon = styled(FiMenu)`
@@ -247,7 +250,7 @@ export const DropdownMenu = styled.div<CustomProps>`
     padding: 1rem;
     height: 133px;
     z-index: 99;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
   }
   ${breakpoints.md} {
     display: ${({ isMobile }) => (isMobile ? "flex" : "block")};
@@ -255,7 +258,7 @@ export const DropdownMenu = styled.div<CustomProps>`
     left: 250px;
     width: 100%;
     padding: 1rem;
-    height: 125px;
+    height: 0px;
     background: none;
     box-shadow: none;
     z-index: 100;
