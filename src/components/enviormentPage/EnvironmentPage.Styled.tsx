@@ -33,6 +33,18 @@ export const LeftArrow = styled.img`
   width: 32px;
   height: 32px;
   filter: brightness(0) invert(1);
+   ${breakpoints.xs} {
+    left: -10%;
+  }
+  ${breakpoints.md} {
+    left: -20%;
+  }
+  ${breakpoints.lg} {
+    left: -2%;
+  }
+  ${breakpoints.xl} {
+    left: -24%;
+  }
 `;
 
 export const RightArrow = styled.img`

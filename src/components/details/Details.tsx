@@ -22,6 +22,7 @@ interface Detail {
   imgDark?: string;
   button: {
     text?: string ;
+    link?:string;
   };
 }
 
@@ -53,7 +54,7 @@ const DetailComponent = ({ detail }: { detail: any }) => {
         <p>{description}</p>
         {button && (
           <button>
-            <Link href={"/careers"}>
+            <Link href={button?.link}>
               {button.text}
               <img
                 src="/images/Button_Arrow.png"
