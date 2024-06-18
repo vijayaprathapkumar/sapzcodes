@@ -1,3 +1,4 @@
+import breakpoints from "@/themes/breakpoints";
 import { theme } from "@/themes/theme";
 import styled from "styled-components";
 
@@ -7,8 +8,15 @@ export const CardWrapper = styled.div`
   align-items: center;
   gap: 16px;
   padding: 25px;
-  flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: -150px;
+  ${breakpoints.xs}{
+  position:relative;
+  bottom:100px;
+  flex-direction:column;
+  }
+  ${breakpoints.md}{
+  flex-direction:row;
+  }
 `;
 export const Card = styled.div`
   background: ${theme.colors.white};
@@ -20,6 +28,7 @@ export const Card = styled.div`
   padding: 26px;
   box-shadow: 0 2px 4px ${theme.colors.shadow};
   cursor: pointer;
+ 
   h3 {
     font-size: 22px;
     font-weight: 600;
@@ -34,6 +43,9 @@ export const Card = styled.div`
     font-size: 18px;
     line-height: 22px;
     color: ${theme.colors.lightgrey};
+  ${breakpoints.xs}{
+  font-size: 12px;
+  }
   }
 
   &:hover {

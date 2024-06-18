@@ -13,4 +13,10 @@ export const ArrowButtonsContainer = styled.div`
   gap: 10px;
   justify-content: right;
   margin-bottom: 20px;
+  ${breakpoints.xs}{
+    margin-top:70px;
+  }
+  ${breakpoints.md}{
+    margin-top:0px;
+  }
 `;

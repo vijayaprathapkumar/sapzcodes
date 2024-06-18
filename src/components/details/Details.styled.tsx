@@ -39,7 +39,7 @@ export const MainWrapper = styled.div<{
     ${breakpoints.xs} {
         flex-direction:column;
         .image{
-            margin-top:700px; 
+            margin-top:520px; 
         }
         .dots{
             margin-top:-50px;
@@ -56,7 +56,7 @@ export const MainWrapper = styled.div<{
     }
     ${breakpoints.sm}{
         .image{
-            top:850px;
+            margin-top:450px;
         }
         .dark{
             margin-top:500px;
@@ -70,7 +70,7 @@ export const MainWrapper = styled.div<{
     ${breakpoints.md} {
         flex-direction:column;
         .image{
-            top:930px; 
+            margin-top:530px; 
         }
         .dots{
             margin-top:-30px;
@@ -88,7 +88,7 @@ export const MainWrapper = styled.div<{
     ${breakpoints.lg} {
         flex-direction:row;
         .image{
-            top:880px; 
+            top:1050px; 
         }
         .dark{
             margin-top:360px;
@@ -101,7 +101,7 @@ export const MainWrapper = styled.div<{
     }
     ${breakpoints.xl} {
         .image{
-            top:960px; 
+            margin-top:560px; 
         }     
     }
 `;
@@ -142,7 +142,7 @@ export const DetailWrapper = styled.div<{
     }
     ${breakpoints.md} {
         order: 1;
-        margin-left: ${({ imageAlignment }) => (imageAlignment === "right" ? '50%' : "10px")};
+        margin-left: ${({ imageAlignment }) => (imageAlignment === "right" ? '50%' : "60px")};
         margin-right: 0px;
         margin-top: 50px;
         margin-bottom:-20px;
@@ -202,19 +202,33 @@ export const AboutDiv = styled.div`
     ${breakpoints.xs} {
         order: 2;
         margin-right: 20px;
-        margin-left: 20px;
+        margin-left:30px;
         margin-top:30px;
+        h4{
+           font-size:14px;
+        }
         h2{
-          font-size:20px;
+          font-size:12px;
+        }
+        p{
+          font-size:12px;
         }
         button{
-           margin-bottom:10px;
+           font-size:12px;
+           margin-bottom:20px;
         }
+    }
+    ${breakpoints.sm}{
+        margin-top:50px;
+        margin-left:50px;
+    }
+    ${breakpoints.sm}{
+        margin-left:60px;
     }
     ${breakpoints.lg} {
         margin-right: 100px;
-        margin-left:60px;
-        margin-top:25px;
+        margin-left:100px;
+        margin-top:50px;
         h2{
             font-size:20px;
         }
@@ -227,7 +241,7 @@ export const AboutDiv = styled.div`
     }
     ${breakpoints.xl} {
         margin-right: 200px;
-        margin-left: 60px;
+        margin-left: 100px;
         h2{
             font-size:23px;
         }
