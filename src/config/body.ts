@@ -28,6 +28,7 @@ export const detailCapabilitiy = {
     "Tailoring SAP systems to work seamlessly with existing infrastructure and business processes.",
   button: {
     text: "Explore",
+    link:'/explore'
   },
   background: `${theme.colors.lightgreen}`,
   objectFit: "contain",
@@ -46,6 +47,7 @@ export const detailsCareer = {
     "Kick-start your professional journey in our multidisciplinary, diverse, global organization, where you can leverage your unique skills and acquire many new ones.",
   button: {
     text: "Career",
+    link:'/careers'
   },
   imgDots: "/images/Dots (2).png",
   imgDark: "/images/dark.png",

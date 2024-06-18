@@ -24,7 +24,7 @@ const TitleWithCardTemplate = (props: TitleWithCardTemplateProps) => {
     return cardList?.map((item, index) => {
       const isExpanded = expandedCardIndex === index;
       const viewMore = {
-        text: isExpanded ? "Show Less" : "See More",
+        text: isExpanded ? "See Less" : "See More",
         textIcon: <IoIosArrowForward />,
         action: () => handleToggleExpand(index),
       };
