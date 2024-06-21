@@ -12,6 +12,7 @@ import {
   MenuIcon,
   MenuWrapper,
   NavLink,
+  NavbarSection,
 } from "./Header.styled";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -67,10 +68,13 @@ const HeaderComponent = ({ scrollToSection }: any) => {
       </LogoSection>
       <LinkContainer>
         <DropdownMenu isMobile={isMobile}>
-          <MenuWrapper isMobile={isMobile}>{renderMenus()}</MenuWrapper>
+          <NavbarSection>
+          <MenuWrapper isMobile={isMobile}>{renderMenus()}
           <Contact onClick={() => scrollToSection("Contact us")}>
             <button className="contact-btn">CONTACT US</button>
           </Contact>
+          </MenuWrapper>
+          </NavbarSection>
         </DropdownMenu>
       </LinkContainer>
       <MenuIcon onClick={toggleBar} />
