@@ -24,6 +24,19 @@ export const BackgroundGradient = styled.div`
   height: 100%;
   top: 0;
   z-index: 0;
+   ${breakpoints.xs} {
+    height: 96%;
+  }
+  ${breakpoints.md} {
+    height: 98%;
+  }
+  ${breakpoints.lg} {
+    height: 98.4%;
+  }
+   ${breakpoints.xl} {
+    height: 99%;
+  }
+
 `;
 
 export const ContentWrapper = styled.div`
@@ -36,9 +49,19 @@ export const ContentWrapper = styled.div`
   left: 0;
   align-items: flex-start;
   justify-content: center;
+ ${breakpoints.xs} {
+  top: 12px;
+  }
   ${breakpoints.md} {
+  top: 26px;
     gap: 30px;
   }
+  ${breakpoints.lg} { 
+   top: 17px;
+  }
+  ${breakpoints.xl} { 
+    top: 0;
+   }
 `;
 
 export const MainContent = styled.div<MainContentProps>`
