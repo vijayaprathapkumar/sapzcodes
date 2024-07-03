@@ -6,41 +6,46 @@ import { styled } from "styled-components";
 
 interface CustomProps {
   isMobile?: boolean;
-  scrollDirection?: "up" | "down";
   hasBgColor?: boolean;
+  pathName?:string;
+}export const HeaderWraper = styled.div<CustomProps>`
+display: flex;
+justify-content: space-around;
+align-items: center;
+color: ${theme.colors.white};
+z-index: 50;
+width: 100%;
+height: 65px;
+position: fixed;
+top: 0;
+left: 0;
+transition: 0.3s;
+
+background-color: ${({ pathName, hasBgColor }) =>
+  (pathName === "/" || pathName === "/careers") ?
+  (hasBgColor ? theme.colors.black : "rgba(0, 0, 0, 0.28)") :
+  theme.colors.black};
+
+${breakpoints.xs} {
+  padding: 0;
+  height: 24px;
 }
-export const HeaderWraper = styled.div<CustomProps>`
+
+${breakpoints.md} {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: ${theme.colors.white};
-  z-index: 50;
   width: 100%;
+  height: 40px;
+}
+
+${breakpoints.lg} {
+  height: 47px;
+}
+
+${breakpoints.xl} {
   height: 65px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: 0.3s;
-
-  ${breakpoints.xs} {
-    padding: 0;
-    height: 24px;
-    background-color: ${({ hasBgColor }) =>
-      hasBgColor ? theme.colors.black : "rgba(0, 0, 0, 0.28)"};
-  }
-
-  ${breakpoints.md} {
-    display: flex;
-    width: 100%;
-    height: 40px;
-  }
-  ${breakpoints.lg} {
-    height: 47px;
-  }
-  ${breakpoints.xl} {
-    height: 65px;
-  }
+}
 `;
+
 export const NavLink = styled.div`
   ${breakpoints.xs} { 
     margin-top: 6px;
@@ -105,6 +110,7 @@ export const MenuWrapper = styled.div<CustomProps>`
   }
 
 `;
+
 export const Contact = styled.div`
   position: relative;
  
@@ -157,10 +163,12 @@ export const Contact = styled.div`
     }
   }
 `;
+
 export const LogoSection = styled.div`
  position: relative;
   right: -5%;
 `;
+
 export const LogoImage = styled.img`
   ${breakpoints.xs} {
     height: 10px;
@@ -179,6 +187,7 @@ export const LogoImage = styled.img`
     width: 275px;
   }
 `;
+
 export const LinkContainer = styled.div`
   display: flex;
   ${breakpoints.xs} {
@@ -192,6 +201,7 @@ export const LinkContainer = styled.div`
   }
 
 `;
+
 export const MenuIcon = styled(FiMenu)`
   ${breakpoints.xs} {
     display: block;
@@ -202,6 +212,7 @@ export const MenuIcon = styled(FiMenu)`
     display: none;
   }
 `;
+
 export const DropdownMenu = styled.div<CustomProps>`
 ${breakpoints.xs} {
   display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
