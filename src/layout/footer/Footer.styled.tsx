@@ -6,18 +6,15 @@ import styled from "styled-components";
 export const Footerwrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 30px;
   ${breakpoints.xs} {
     grid-template-columns: 1fr;
   }
   ${breakpoints.md} {
     grid-template-columns: 1fr 1fr;
-    margin-top: 100px;
     column-gap:270px;
   }
   ${breakpoints.lg} {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 100px;
     justify-items: end;
     column-gap:0px;
   }

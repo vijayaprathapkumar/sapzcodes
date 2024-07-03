@@ -7,7 +7,9 @@ const CustomTitle = (props: any) => {
     <Warpper alignMent={alignMent}>
       <Title>{title}</Title>
       <SubTitle>{subTitle}</SubTitle>
-      <Description  dangerouslySetInnerHTML={{__html: description}} />
+      {description && (
+        <Description dangerouslySetInnerHTML={{ __html: description }} />
+      )}
     </Warpper>
   );
 };

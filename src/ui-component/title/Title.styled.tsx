@@ -63,5 +63,9 @@ export const Description = styled.p`
   }
   ${breakpoints.lg} {
     width: 920px !important;
+    font-size:14px;
+  }
+  ${breakpoints.xl} {
+    font-size:16px;
   }
 `;

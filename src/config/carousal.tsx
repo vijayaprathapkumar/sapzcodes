@@ -17,7 +17,6 @@ export const ServicecarouselTitle = {
 export const CareerTitle = {
   title: "Lets have a Walk",
   subTitle: "Opportunities That We Provide You",
-  description: "",
 };
 
 export const ServicesItemsCarrer = [
