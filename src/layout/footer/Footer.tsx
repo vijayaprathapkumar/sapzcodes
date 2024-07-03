@@ -10,8 +10,9 @@ import {
 } from "./Footer.styled";
 import Link from "next/link";
 
-const FooterComponent = ({ scrollToSection }: any) => {
+const FooterComponent = () => {
   const currentyear = new Date().getFullYear();
+
   return (
     <div className="layout-gap">
       <Footerwrapper>
@@ -32,23 +33,11 @@ const FooterComponent = ({ scrollToSection }: any) => {
               <h4>{title}</h4>
               {description && <p>{description}</p>}
               <ul>
-                {subApp && (
-                  <li onClick={() => scrollToSection(subApp)}>{subApp}</li>
-                )}
-                {subWeb && (
-                  <li>
-                    <Link href={'/careers'}>{subWeb}</Link>
-                  </li>
-                )}
-                {subErp && (
-                  <li onClick={() => scrollToSection(subErp)}>{subErp}</li>
-                )}
-                {subout && (
-                  <li onClick={() => scrollToSection(subout)}>{subout}</li>
-                )}
-                {subuse && (
-                  <li onClick={() => scrollToSection(subuse)}>{subuse}</li>
-                )}
+                {subApp && <li>{subApp}</li>}
+                {subWeb && <li>{subWeb}</li>}
+                {subErp && <li>{subErp}</li>}
+                {subout && <li>{subout}</li>}
+                {subuse && <li>{subuse}</li>}
               </ul>
             </Maindiv>
           );
