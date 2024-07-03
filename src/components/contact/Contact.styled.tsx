@@ -3,10 +3,18 @@ import { theme } from "@/themes/theme";
 import styled from "styled-components";
 
 export const ContactWrapper = styled.div`
+align-items: center;
+justify-items: center;
+${breakpoints.xs} { 
   display: grid;
-  grid-template-columns: 500px 1fr;
-  align-items: center;
-  justify-items: center;
+  grid-template-columns: 1fr;
+  position: relative;
+  top: 20px;
+}
+${breakpoints.lg} { 
+ grid-template-columns: 500px 1fr;
+  top: 0;
+}
 `;
 export const AddressContent = styled.div`
   .conct {
@@ -81,8 +89,14 @@ export const ContactSection = styled.div`
 export const ImageSection = styled.div`
   ${breakpoints.xs} {
     .contact-image {
+       height: 450px;
+      width: 350px;
+    }
+  }
+    ${breakpoints.md} { 
+     .contact-image {
       height: 550px;
       width: 450px;
     }
-  }
+    }
 `;

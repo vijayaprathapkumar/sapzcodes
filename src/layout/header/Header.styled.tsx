@@ -47,20 +47,21 @@ ${breakpoints.xl} {
 `;
 
 export const NavLink = styled.div`
-  position: relative;
-  ${breakpoints.xs} {
-    right: 0;
-    left: 0;
+  ${breakpoints.xs} { 
+    margin-top: 6px;
   }
-  ${breakpoints.md} {
-    left: 0%;
-  }
-  ${breakpoints.lg} {
-    left: 13%;
-  }
-  ${breakpoints.xl} {
-    left: 34%;
-  }
+   ${breakpoints.md} { 
+   margin-top: 3px;
+    font-size: 12px;
+   }
+    ${breakpoints.lg} { 
+    margin-top: 1px;
+    font-size: 15px;
+   }
+     ${breakpoints.xl} { 
+     margin-top: 7px;
+      font-size: 17px;
+   }
 `;
 
 export const LinkStyled = styled(Link)<{ href: string }>`
@@ -77,29 +78,19 @@ export const LinkStyled = styled(Link)<{ href: string }>`
     color: #46d200;
   }
   ${breakpoints.xs} {
-    bottom: 10px;
     color: black;
   }
   ${breakpoints.md} {
-    bottom: 44px;
     color: ${theme.colors.white};
-  }
-  ${breakpoints.lg} {
-    bottom: 42px;
-    color: ${theme.colors.white};
-  }
-  ${breakpoints.xl} {
-    bottom: 36px;
-    color: ${theme.colors.white};
-  }
+}
 `;
 
 export const MenuWrapper = styled.div<CustomProps>`
-  gap: 3rem;
-
-  ${breakpoints.xs} {
+   gap: 3rem;
+   ${breakpoints.xs} {
     flex-direction: column;
     gap: 5px;
+    margin-top: 8px;
     position: relative;
     font-size: 10px;
     display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
@@ -108,27 +99,24 @@ export const MenuWrapper = styled.div<CustomProps>`
     width: 100%;
   }
   ${breakpoints.md} {
-    gap: 2rem;
+    gap: 1rem;
     flex-direction: row;
-    font-size: 12px;
+    margin-top: 0px;
     display: flex;
   }
   ${breakpoints.lg} {
     gap: 3rem;
-    font-size: 15px;
+    
   }
-  ${breakpoints.xl} {
-    font-size: 17px;
-  }
+
 `;
 
 export const Contact = styled.div`
   position: relative;
-  left: 4%;
-
+ 
   .contact-btn {
     background-color: transparent;
-    color: ${theme.colors.white};
+    color: ${theme.colors.green};
     height: 40px;
     width: 150px;
     border-radius: 5px;
@@ -136,10 +124,7 @@ export const Contact = styled.div`
     padding: 5px;
     cursor: pointer;
   }
-  ${breakpoints.xs} {
-    bottom: 15px;
-    left: 0;
-
+    ${breakpoints.xs} {
     .contact-btn {
       height: 20px;
       color: black;
@@ -151,9 +136,6 @@ export const Contact = styled.div`
     }
   }
   ${breakpoints.md} {
-    left: 50%;
-    bottom: 83px;
-
     .contact-btn {
       background-color: transparent;
       color: ${theme.colors.white};
@@ -166,8 +148,6 @@ export const Contact = styled.div`
     }
   }
   ${breakpoints.lg} {
-    left: 63%;
-
     .contact-btn {
       height: 26px;
       font-size: 12px;
@@ -175,8 +155,6 @@ export const Contact = styled.div`
     }
   }
   ${breakpoints.xl} {
-    left: 71%;
-
     .contact-btn {
       height: 40px;
       font-size: 13px;
@@ -187,20 +165,8 @@ export const Contact = styled.div`
 `;
 
 export const LogoSection = styled.div`
-  position: relative;
-  right: 3%;
-  ${breakpoints.xs} {
-    left: 30px;
-  }
-  ${breakpoints.md} {
-    right: 3%;
-  }
-  ${breakpoints.lg} {
-    right: 2%;
-  }
-  ${breakpoints.xl} {
-    left: 5%;
-  }
+ position: relative;
+  right: -5%;
 `;
 
 export const LogoImage = styled.img`
@@ -233,6 +199,7 @@ export const LinkContainer = styled.div`
     flex-direction: row;
     align-items: center;
   }
+
 `;
 
 export const MenuIcon = styled(FiMenu)`
@@ -247,29 +214,45 @@ export const MenuIcon = styled(FiMenu)`
 `;
 
 export const DropdownMenu = styled.div<CustomProps>`
-  ${breakpoints.xs} {
-    display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 25px;
-    right: 0;
-    width: 100%;
-    background-color: ${theme.colors.white};
-    padding: 1rem;
-    height: 133px;
-    z-index: 99;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0);
-  }
-  ${breakpoints.md} {
-    display: ${({ isMobile }) => (isMobile ? "flex" : "block")};
-    position: absolute;
-    left: 250px;
-    width: 100%;
-    padding: 1rem;
-    height: 125px;
-    background: none;
-    box-shadow: none;
-    z-index: 100;
-  }
+${breakpoints.xs} {
+  display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: 100%;
+  background-color: ${theme.colors.white};
+  padding: 1rem;
+  height: 133px;
+  z-index: 99;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+}
+${breakpoints.md} {
+  display: ${({ isMobile }) => (isMobile ? "flex" : "block")};
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  height: 0px;
+  background: none;
+  box-shadow: none;
+  z-index: 100;
+}
 `;
+
+export const NavbarSection = styled.div`
+ float: right;
+ margin-top: -40px;
+ padding-right: 40px;
+ ${breakpoints.md} {
+float: right;
+ margin-top: -50px;
+ padding-right: 10px;
+ }
+ ${breakpoints.lg} {
+  float: right;
+ margin-top: -45px;
+ padding-right: 15px;
+ }
+`;
+
