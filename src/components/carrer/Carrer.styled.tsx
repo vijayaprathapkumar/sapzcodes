@@ -8,14 +8,14 @@ export const CardWrapper = styled.div`
   align-items: center;
   gap: 16px;
   padding: 25px;
-  margin-bottom: -150px;
-  ${breakpoints.xs}{
-  position:relative;
-  bottom:100px;
-  flex-direction:column;
+  ${breakpoints.xs} {
+    flex-direction: column;
   }
-  ${breakpoints.md}{
-  flex-direction:row;
+  ${breakpoints.md} {
+    flex-direction: row;
+  }
+  ${breakpoints.xl} {
+    margin: 50px 0px 50px 0px;
   }
 `;
 export const Card = styled.div`
@@ -28,9 +28,17 @@ export const Card = styled.div`
   padding: 26px;
   box-shadow: 0 2px 4px ${theme.colors.shadow};
   cursor: pointer;
- 
+  ${breakpoints.md} {
+    height: 280px;
+    width: 319px;
+  }
+  ${breakpoints.xl} {
+    height: 350px;
+    width: 349px;
+  }
+
   h3 {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 600;
     line-height: 28.8px;
     letter-spacing: calc(0.18 * 0.5 / 100);
@@ -38,14 +46,27 @@ export const Card = styled.div`
   }
 
   p {
-    margin: 40px 0;
-    font-weight: 500;
-    font-size: 18px;
+    margin: 37px 0;
+
     line-height: 22px;
     color: ${theme.colors.lightgrey};
-  ${breakpoints.xs}{
-  font-size: 12px;
-  }
+    ${breakpoints.xs} {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    ${breakpoints.md} {
+      font-weight: 400;
+      font-size: 14px;
+    }
+    ${breakpoints.lg} {
+      font-weight: 400;
+      font-size: 18px;
+    }
+    ${breakpoints.xl} {
+      
+   
+      margin: 57px 0;
+    }
   }
 
   &:hover {

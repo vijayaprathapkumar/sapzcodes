@@ -34,7 +34,7 @@ const ContactComponent = () => {
         <ContactSection>
           <h3>Reach out to us at</h3>
           <div className="envelope-part">
-            <a href="mailto:contact@homelun.com">
+            <a href="mailto:hr@sapzcodes.com">
               <img
                 src="/images/Envelope.png"
                 alt="Envelope-Img"
@@ -44,11 +44,11 @@ const ContactComponent = () => {
             </a>
           </div>
           <div className="part-sec">
-            <a href="tel:+1234567890">
+            <a href="tel:+9500272842">
               <img src="/images/Phone.png" alt="Phone-Img" className="phone" />
               <p>+91 9500272842</p>
             </a>
-            <a href="https://wa.me/1234567890">
+            <a href="https://wa.me/9500272842" target='_blank'>
               <PiWhatsappLogoThin className="whatsapp-icon" />
               <p>+91 9500272842</p>
             </a>

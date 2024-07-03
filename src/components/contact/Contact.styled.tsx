@@ -5,6 +5,7 @@ import styled from "styled-components";
 export const ContactWrapper = styled.div`
 align-items: center;
 justify-items: center;
+margin-bottom:70px;
 ${breakpoints.xs} { 
   display: grid;
   grid-template-columns: 1fr;
