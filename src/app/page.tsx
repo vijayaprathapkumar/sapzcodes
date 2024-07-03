@@ -9,20 +9,31 @@ import { BannerDash } from "@/config/banner";
 import CarouselwithBannerComponent from "@/components/carouselwithBanner/CarouselwithBanner";
 import { ServicecarouselTitle, ServicesItemsAll } from "@/config/carousal";
 
-export default function Home() {;
+export default function Home() {
   return (
     <>
-      <BannerComponent bannerMain={BannerDash} />
+      <div id="Home">
+        <BannerComponent bannerMain={BannerDash} />
+      </div>
+
       <CarouselwithBannerComponent
         bannerTitle={ServicecarouselTitle}
         carouselItemData={ServicesItemsAll}
       />
-      <DetailComponent detail={detailsAbout} />
+      <div id="About Us">
+        <DetailComponent detail={detailsAbout} />
+      </div>
+
       <DetailComponent detail={detailCapabilitiy} />
       {/* <CustomerReviewComponent/> */}
       <EnvironmentComponent />
-      <DetailComponent detail={detailsCareer} />
-      <ContactComponent />
+      <div id="Careers">
+        <DetailComponent detail={detailsCareer} />
+      </div>
+
+      <div id="Contact us">
+        <ContactComponent />
+      </div>
     </>
   );
 }

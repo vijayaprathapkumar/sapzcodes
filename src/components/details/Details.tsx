@@ -51,8 +51,8 @@ const DetailComponent = ({ detail }: { detail: Detail }) => {
         <h4>{title}</h4>
         <h2>{subTitle}</h2>
         <p>{description}</p>
-        <Link href ={'/explore'}>
-          <button>
+        <button>
+          <Link href={"/careers"}>
             {button.text}
             <img
               src="/images/Button_Arrow.png"
@@ -60,8 +60,8 @@ const DetailComponent = ({ detail }: { detail: Detail }) => {
               width={27}
               height={13}
             />
-          </button>
-        </Link>
+          </Link>
+        </button>
       </AboutDiv>
       <DetailWrapper
         objectFit={objectFit}

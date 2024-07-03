@@ -7,11 +7,22 @@ export type LayoutProps = {
     children: ReactNode;
   };
 const HomePageLayout = ({ children }: LayoutProps) => {
+    const scrollToSection = (sectionId: any) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const offsetTop = section.offsetTop - 110;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth",
+          });
+        }
+      };
+
     return(
         <>
-        <HeaderComponent/>
+        <HeaderComponent scrollToSection={scrollToSection}/>
         {children}
-        <FooterComponent/>
+        <FooterComponent scrollToSection={scrollToSection}/>
         </>
     );
 
