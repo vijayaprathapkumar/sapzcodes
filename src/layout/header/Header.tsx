@@ -14,17 +14,18 @@ import {
   NavLink,
 } from "./Header.styled";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname } from 'next/navigation'
 
 type Menu = {
   path: string;
   name: string;
 };
 
-const HeaderComponent = ({ scrollToSection }: any) => {
-  const pathName = usePathname();
-  const hasBgColor = pathName === "/" || pathName === "/careers" ? false : true;
-  console.log(pathName, "pathName");
+
+const HeaderComponent = () => {
+  const pathName =  usePathname();
+  const hasBgColor = pathName === '/' || pathName === '/careers' ? false : true;
+  console.log(pathName,'pathName');
   const [isMobile, setMobile] = useState(false);
   const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const toggleBar = () => {
@@ -40,7 +41,7 @@ const HeaderComponent = ({ scrollToSection }: any) => {
       );
     });
   };
-
+  
   useEffect(() => {
     let lastScrollY = window.pageYOffset;
 
@@ -68,7 +69,7 @@ const HeaderComponent = ({ scrollToSection }: any) => {
       <LinkContainer>
         <DropdownMenu isMobile={isMobile}>
           <MenuWrapper isMobile={isMobile}>{renderMenus()}</MenuWrapper>
-          <Contact onClick={() => scrollToSection("Contact us")}>
+          <Contact>
             <button className="contact-btn">CONTACT US</button>
           </Contact>
         </DropdownMenu>

@@ -19,20 +19,17 @@ export const HeaderWraper = styled.div<CustomProps>`
   height: 65px;
   position: fixed;
   top: 0;
-  left: 0;
+  left:0;
   transition: 0.3s;
 
-  ${({ scrollDirection }) =>
-    scrollDirection === "down" &&
-    `
+  ${({ scrollDirection }) => scrollDirection === "down" && `
     top: -65px;
   `}
 
   ${breakpoints.xs} {
     padding: 0;
     height: 24px;
-    background-color: ${({ hasBgColor }) =>
-      hasBgColor ? theme.colors.black : "rgba(0, 0, 0, 0.28)"};
+    background-color: ${({ hasBgColor }) => (hasBgColor ? theme.colors.black : "rgba(0, 0, 0, 0.28)")};
   }
 
   ${breakpoints.md} {
@@ -48,7 +45,7 @@ export const HeaderWraper = styled.div<CustomProps>`
   }
 `;
 export const NavLink = styled.div`
-  position: relative;
+  position: relative; 
   ${breakpoints.xs} {
     right: 0;
     left: 0;
@@ -56,19 +53,19 @@ export const NavLink = styled.div`
   ${breakpoints.md} {
     left: 0%;
   }
-  ${breakpoints.lg} {
+  ${breakpoints.lg} { 
     left: 13%;
   }
-  ${breakpoints.xl} {
+  ${breakpoints.xl} { 
     left: 34%;
   }
 `;
 
 export const LinkStyled = styled(Link)<{ href: string }>`
-  color: ${theme.colors.white};
+color: ${theme.colors.white};
   text-decoration: none;
   position: relative;
-  transition: color 0.3s, text-decoration 0.3s;
+  transition: color 0.3s, text-decoration 0.3s; 
   &:hover {
     color: ${theme.colors.green};
     text-decoration: underline;
@@ -78,21 +75,22 @@ export const LinkStyled = styled(Link)<{ href: string }>`
     color: #46d200;
   }
   ${breakpoints.xs} {
-    bottom: 10px;
+    bottom: 10px; 
     color: black;
-  }
-  ${breakpoints.md} {
-    bottom: 44px;
+   }
+   ${breakpoints.md} {
+    bottom: 44px; 
     color: ${theme.colors.white};
-  }
-  ${breakpoints.lg} {
-    bottom: 42px;
+   }
+   ${breakpoints.lg} {
+    bottom: 42px; 
     color: ${theme.colors.white};
-  }
-  ${breakpoints.xl} {
-    bottom: 36px;
+   }
+   ${breakpoints.xl} { 
+    bottom: 36px; 
     color: ${theme.colors.white};
-  }
+   }
+
 `;
 export const MenuWrapper = styled.div<CustomProps>`
   gap: 3rem;
@@ -112,14 +110,18 @@ export const MenuWrapper = styled.div<CustomProps>`
     flex-direction: row;
     font-size: 12px;
     display: flex;
+    
   }
-  ${breakpoints.lg} {
+  ${breakpoints.lg} { 
     gap: 3rem;
     font-size: 15px;
+    
   }
-  ${breakpoints.xl} {
+  ${breakpoints.xl} { 
     font-size: 17px;
   }
+
+ 
 `;
 export const Contact = styled.div`
   position: relative;
@@ -133,7 +135,7 @@ export const Contact = styled.div`
     border-radius: 5px;
     border: 1px solid white;
     padding: 5px;
-    cursor: pointer;
+    
   }
   ${breakpoints.xs} {
     bottom: 15px;
@@ -152,7 +154,7 @@ export const Contact = styled.div`
   ${breakpoints.md} {
     left: 50%;
     bottom: 83px;
-
+  
     .contact-btn {
       background-color: transparent;
       color: ${theme.colors.white};
@@ -164,7 +166,7 @@ export const Contact = styled.div`
       padding: 5px;
     }
   }
-  ${breakpoints.lg} {
+  ${breakpoints.lg} { 
     left: 63%;
 
     .contact-btn {
@@ -173,7 +175,7 @@ export const Contact = styled.div`
       width: 90px;
     }
   }
-  ${breakpoints.xl} {
+  ${breakpoints.xl} { 
     left: 71%;
 
     .contact-btn {
@@ -191,7 +193,7 @@ export const LogoSection = styled.div`
     left: 30px;
   }
   ${breakpoints.md} {
-    right: 3%;
+   right: 3%;
   }
   ${breakpoints.lg} {
     right: 2%;
@@ -199,8 +201,10 @@ export const LogoSection = styled.div`
   ${breakpoints.xl} {
     left: 5%;
   }
+ 
 `;
 export const LogoImage = styled.img`
+
   ${breakpoints.xs} {
     height: 10px;
     width: 100px;
@@ -211,7 +215,7 @@ export const LogoImage = styled.img`
   }
   ${breakpoints.lg} {
     height: 19px;
-    width: 200px;
+   width: 200px;
   }
   ${breakpoints.xl} {
     height: 29px;
@@ -219,7 +223,7 @@ export const LogoImage = styled.img`
   }
 `;
 export const LinkContainer = styled.div`
-  display: flex;
+ display: flex;
   ${breakpoints.xs} {
     flex-direction: column;
     align-items: flex-start;
@@ -231,16 +235,19 @@ export const LinkContainer = styled.div`
   }
 `;
 export const MenuIcon = styled(FiMenu)`
+
   ${breakpoints.xs} {
-    display: block;
-    position: relative;
-    right: 8%;
+     display: block;
+     position: relative;
+     right: 8%;
   }
   ${breakpoints.md} {
     display: none;
-  }
+ }
+
 `;
 export const DropdownMenu = styled.div<CustomProps>`
+
   ${breakpoints.xs} {
     display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
     flex-direction: column;
@@ -253,7 +260,7 @@ export const DropdownMenu = styled.div<CustomProps>`
     padding: 1rem;
     height: 133px;
     z-index: 99;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.0);
   }
   ${breakpoints.md} {
     display: ${({ isMobile }) => (isMobile ? "flex" : "block")};
@@ -267,3 +274,5 @@ export const DropdownMenu = styled.div<CustomProps>`
     z-index: 100;
   }
 `;
+
+

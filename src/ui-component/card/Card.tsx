@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   ButtonStyled,
   CardDescription,
@@ -7,6 +8,7 @@ import {
   StyledCardContainer,
   ViewMoreLink,
 } from "./Card.styled";
+import Link from "next/link";
 
 const MediumCard = ({ cardItems }: any) => {
   const { icon, title, description, isExpanded, viewMore } = cardItems;
@@ -27,20 +29,17 @@ const MediumCard = ({ cardItems }: any) => {
       );
     }
 
-    if (!href && truncatedDescription.length > 190) {
-      return (
-        <ButtonStyled onClick={action}>
-          {text} {textIcon}
-        </ButtonStyled>
-      );
-    }
-    return null;
+    return (
+      <ButtonStyled onClick={action}>
+        {text} {textIcon}
+      </ButtonStyled>
+    );
   };
 
   return (
     <StyledCardContainer>
       <CardWrapper isExpanded={isExpanded}>
-        {icon && <CardIcon>{icon}</CardIcon>}
+        <CardIcon>{icon}</CardIcon>
         <CardTitle>{title}</CardTitle>
         <CardDescription id={`desc-${title}`} isExpanded={isExpanded}>
           {truncatedDescription}

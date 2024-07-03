@@ -40,7 +40,6 @@ export const Maindiv = styled.div`
     color: ${theme.colors.grey};
     font-size: 14px;
     font-weight: 400;
-    cursor: pointer;
   }
 `;
 export const Bootomwrapper = styled.div`
