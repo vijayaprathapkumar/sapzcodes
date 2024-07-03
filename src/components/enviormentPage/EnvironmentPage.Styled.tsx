@@ -90,7 +90,7 @@ export const Heading = styled.div`
   ${breakpoints.xs} {
     font-size: 22px;
     font-weight: 800;
-    margin-top: 230px;
+    margin-top: 70px;
   }
   ${breakpoints.sm} {
     font-size: 36px;
@@ -115,6 +115,7 @@ export const SubHeading = styled.p`
     max-width: 440px;
     text-align: center;
     font-size: 12px;
+    padding:0 7%;
   }
   ${breakpoints.sm} {
     max-width: 840px;
